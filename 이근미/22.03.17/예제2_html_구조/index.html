@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>html 구조</title>
+</head>
+
+<body>
+
+  <header>
+    가급적 위에서 아래로 h1~h6 순차적으로 사용 (크기조절은 나중에 따로)
+    <h1>html이란 무엇인가?</h1>
+    <h2>html의 구조와 tag에 대해서 알아본다.</h2>
+  </header>
+  <div id="container">
+    <article>
+      <h3>html의 정의</h3>
+      <section>
+        <!-- strong 노인 및 시각장애인을 위하여 강조(?) -->
+        <p><strong>html은 프로그래밍 언어가 아닙니다.</strong> 컨텐츠의 구조를 정의하는 마크업 언어입니다.<br>
+          html은 컨텐츠의 서로 다은 부분들을 씌우거나(wrap) 감싸 다른 형식으로 보이게 하거나
+          특정한 방식으로 동작하도록 하는 일련의 요소로 이루어져 있습니다.
+          <a href="https://developer.mozilla.org/ko/docs/web/HTML" target="_blank">html 더 알아보기</a>
+          <!-- _self와 _blank의 차이점 - 띄운창이 그대로 변환 /새창띄워짐 -->
+        </p>
+        <img src="./image/html_image_01.png" title="html정의 이미지1" alt="html정의 이미지1">
+        <!-- alt는 이미지가 뜨지 않을 때 대체 텍스트 -->
+      </section>
+      <h3>일련의 요소(elements)의 예</h3>
+      <section>
+        <p>tag로 감싸는 단어나 이미지를 다른 어딘가로 하이퍼링크하거나 단어들을
+          이텔릭체로 표시하고 글씨체를 크게 또는 작게 만드는 등의 일을 할 수 있습니다.</p>
+        <img src="./image/html_image_02.png" title="html정의 이미지2" alt="html정의 이미지2">
+      </section>
+    </article>
+    <article>
+      <h3>tag의 종류</h3>
+      <section>
+        <p>html,div,head,body,header,section,article,h1~h6,footer</p>
+      </section>
+      <h3>일련의 요소(elements)의 예</h3>
+      <section>
+        <p>tag로 감싸는 단어나 이미지를 다른 어딘가로 하이퍼링크하거나 단어들을
+          이텔릭체로 표시하고 글씨체를 크게 또는 작게 만드는 등의 일을 할 수 있습니다.</p>
+      </section>
+    </article>
+    <article>
+      <h3>관련사이트</h3>
+      <!-- <ul>
+        <li><a href="#"></a></li>
+      </ul><!--unordered list-->
+
+      <!-- 아래 site01~05 : ul>li*5>a[href=#]{html_site0$} 하고  ctrl + e 하기 -->
+      <ul>
+        <li><a href="#">html_site01</a></li>
+        <li><a href="#">html_site02</a></li>
+        <li><a href="#">html_site03</a></li>
+        <li><a href="#">html_site04</a></li>
+        <li><a href="#">html_site05</a></li>
+      </ul>
+      <!-- ol>li*5>a[href=#][target=_blank]{ol list $} -->
+      <ol>
+        <li><a href="#" target="_blank">ol list 1</a></li>
+        <li><a href="#" target="_blank">ol list 2</a></li>
+        <li><a href="#" target="_blank">ol list 3</a></li>
+        <li><a href="#" target="_blank">ol list 4</a></li>
+        <li><a href="#" target="_blank">ol list 5</a></li>
+      </ol>
+    </article>
+  </div>
+  <footer>2022 Design By aa &copy;copyright All right reserved&excl;</footer>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>vue.js v-bind</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="menu" v-bind:class="menuToggle">menu</div>
+      <a v-bind:href="goHome" v-bind:title="title">home</a><!--href와 title 속성을 v-bind를 사용하여 출력하시오-->
+      <input v-bind:type="inputType" v-bind:checked="checked"><!--v-bind를 사용하여 type속성을 radio로 변경, checked추가 출력하시오-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: '#app',
+        data: {
+          menuToggle: 'active',
+          goHome: 'http://naver.com',
+          title: 'naver',
+          inputType: 'radio',
+          checked: true
+        }
+      });
+    </script>
+  </body>
+</html>

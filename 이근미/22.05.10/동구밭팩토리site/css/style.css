@@ -1,0 +1,388 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+body {font-family: 'Noto Sans KR', sans-serif;}
+
+a {
+  color: black;
+}
+/*-----main공통-----*/
+.mainCon {width:100%; position:relative; margin:120px auto 0;}
+.mainCon .inner {width:100%; max-width:1080px; position:relative; margin:0 auto; padding:0 15px; box-sizing:border-box;}
+
+.mainCon .titArea {width:100%; position:relative; margin:0 auto 50px;}
+.mainCon .titArea p {display:block; text-align:center; position:relative; margin:0;}
+.mainCon .titArea .t1 {font-size:34px; line-height:42px; font-weight:600; color:#000;}
+.mainCon .titArea .t2 {font-size:20px; line-height:30px; font-weight:400; color:#505050; margin:20px auto 0;}
+.mainCon .titArea .tit {font-size:24px; line-height:30px; font-weight:500; color:#918f82;}
+.mainCon .titArea .con {font-size:16px; line-height:26px; font-weight:400; color:#737373;}
+
+.mainCon .btnArea {width:100%; text-align:center; position:relative; margin:50px auto 0; padding:0;}
+.mainCon .btnArea a {display:inline-block; height:56px; line-height:56px; font-size:18px; font-weight:400; color:#000; border:1px solid #000; background:transparent; margin:0 15px 0 0; padding:0 60px; box-sizing:border-box;
+  transition:all 0.3s ease;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  -ms-transition:all 0.3s ease;
+}
+.mainCon .btnArea a:hover,
+.mainCon .btnArea a:focus,
+.mainCon .btnArea a:active {color:#fff; background:#000;}
+.mainCon .btnArea a:last-child {margin:0;}
+
+
+@media screen and (max-width:1024px){
+}
+
+@media screen and (max-width:960px){
+  .mainCon .titArea .t1 {font-size:30px; line-height:38px;}
+  .mainCon .titArea .t2 {font-size:16px; line-height:26px;}
+  .mainCon .titArea .tit {font-size:20px; line-height:26px;}
+  .mainCon .titArea .con {font-size:15px; line-height:24px;}
+}
+
+@media screen and (max-width:768px){
+  .mainCon {margin:100px auto 0;}
+  .mainCon .titArea {margin:0 auto 40px;}
+  .mainCon .titArea .t1 {font-size:26px; line-height:34px;}
+  .mainCon .titArea .t2 {font-size:14px; line-height:24px;}
+  .mainCon .titArea .tit {font-size:18px; line-height:24px;}
+  .mainCon .titArea .con {font-size:14px; line-height:22px;}
+
+  .mainCon .btnArea {margin:30px auto 0;}
+  .mainCon .btnArea a {height:46px; line-height:46px; font-size:15px; padding:0 30px;}
+}
+
+@media screen and (max-width:640px){
+  .mainCon {margin:80px auto 0;}
+  .mainCon .titArea .t1 {font-size:22px; line-height:30px;}
+  .mainCon .titArea .t2 {font-size:13px; line-height:22px;}
+  .mainCon .titArea .tit {font-size:17px; line-height:22px;}
+  .mainCon .titArea .con {font-size:13px; line-height:22px;}
+}
+
+@media screen and (max-width:480px){
+  .mainCon {margin:60px auto 0;}
+  .mainCon .titArea {margin:0 auto 30px;}
+  .mainCon .titArea .t1 {font-size:20px; line-height:28px;}
+  .mainCon .titArea .t2 {font-size:13px; line-height:20px;}
+  .mainCon .titArea .tit {font-size:16px; line-height:20px;}
+  .mainCon .titArea .con {font-size:13px; line-height:20px;}
+}
+
+
+
+/*-----header-----*/
+.headerFake {
+  width: 100%;
+  height: 95px;
+  position: relative;
+  display: none;
+}
+
+.headerWrap {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: transparent;
+  /* background: rgba(0,0,0,.3); */
+}
+.headerWrap.fixed {
+  background: rgba(0,0,0,0.25);
+}
+.headerWrap .header {
+  width: 100%; max-width: 1830px;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 15px;
+  box-sizing: border-box;
+}
+.headerWrap.fixed .header {
+  padding: 20px 15px;
+}
+.headerWrap .inner {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+
+.headerWrap .header .logo {
+  display: block;
+  width: 96px; height: 65px;
+  z-index: 5;
+}
+.headerWrap.fixed .header .logo {
+  width: 78px; height: 52px;
+}
+.headerWrap .header .logo img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+
+
+.headerWrap .header .hambuger {
+  display: block;
+  width: 32px; height: 32px;
+  position: absolute;
+  top: 50%; right: 15px;
+  margin: -16px 0 0 0;
+}
+.headerWrap.fixed .header .hamburger {
+  width: 26px; height: 26px;
+  margin: -13px 0 0 0;
+}
+.headerWrap .header .hamburger img {
+  display: block;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+
+
+.headerWrap .gnbWrap {
+  width: 100%; height: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 110;
+  background: rgba(0,0,0,1.0);
+  text-align: center;
+  display: none;
+  opacity: 0;
+}
+.headerWrap .gnbWrap .inner {
+  width: 100%; max-width: 100%; height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.headerWrap .gnbWrap.open {
+  display: block;
+}
+.headerWrap .gnbWrap.open.active {
+  opacity: 1;
+}
+
+
+
+.headerWrap .gnbWrap .closeBtn {
+  display: block;
+  width: 32px; height: 32px;
+  position: absolute;
+  top: 45px; right: 30px;
+  z-index: 5;
+}
+.headerWrap.fixed .gnbWrap .closeBtn {
+  top: 30px;
+}
+
+
+.headerWrap .gnbWrap .gnb {
+  width: 100%; height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+.disT {
+  display: table;
+  position: relative;
+  width: 100%; height: 100%;
+}
+.disTC {
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.headerWrap .gnbWrap ul {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.headerWrap .gnbWrap ul li {
+  display: block;
+  width: auto;
+  position: relative;
+  margin: 0 auto 50px;
+  padding: 0;
+  text-align: center;
+}
+.headerWrap .gnbWrap ul li:last-child {
+  margin: 0 auto;
+}
+.headerWrap .gnbWrap ul li a {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  opacity: 0.6;
+  width: auto;
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 550;
+  color: #fff;
+}
+.headerWrap .gnbWrap ul li a:hover, .headerWrap .gnbWrap ul li a:focus, .headerWrap .gnbWrap ul li a:active {
+  opacity: 1;
+}
+
+/* @media screen and (max-width:1200px){
+} */
+
+@media screen and (max-width:1080px){
+  /* .headerFake {}
+  .headerFake.fixed {}
+
+  .headerWrap {} */
+  .headerWrap .header {padding:25px 15px;}
+  .headerWrap.fixed .header {padding:15px 15px;}
+
+  .headerWrap .header .logo {width:50px !important; height:34px !important; position:relative;}
+
+  .headerWrap .gnbWrap ul li {margin:0 auto 30px;}
+  .headerWrap .gnbWrap ul li:last-child {margin:0 auto;}
+  .headerWrap .gnbWrap ul li a {font-size:26px; line-height:32px;}
+
+  .headerWrap .header .hamburger {width:16px !important; height:16px !important; margin:-8px 0 0 0 !important; right:10px;}
+
+  .headerWrap .gnbWrap .closeBtn {width:16px; height:16px; top:25px;}
+  .headerWrap.fixed .gnbWrap .closeBtn {top:15px;}
+}
+
+@media screen and (max-width:768px){
+  .headerWrap .gnbWrap ul li a {font-size:24px; line-height:30px;}
+}
+
+
+
+/*-----mainTopBanner-----*/
+.mainTopBanner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainTopBanner .banner {
+  width: 100%;
+  height: 1080px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+.mainTopBanner .toDown {
+  display:block;
+  width:47px; height:47px;
+  position:absolute;
+  bottom:40px; left:50%;
+  margin:0 0 0 -23.5px;
+}
+.mainTopBanner .toDown img {
+  max-width:100%;
+  vertical-align:top;
+}
+
+
+
+.mainTopBanner .banner._1 {
+  /* height:auto; */
+}
+.mainTopBanner .banner._1 .mov {
+  width:100%; height:0;
+  position:relative;
+  overflow:hidden;
+  padding-bottom:56.25%;
+}
+.mainTopBanner .banner._1 .mov video {
+  display:block;
+  width:100%; height:100%;
+  position:absolute;
+  top:0; left:0;
+}
+.mainTopBanner .banner._1 .typo {
+  width:914px; height:493px;
+  position:absolute;
+  top:50%; left:50%;
+  margin:-246.5px 0 0 -457px;}
+.mainTopBanner .banner._1 .typo img {
+  width:100%;
+}
+
+
+@media screen and (max-width:1280px){
+  .mainTopBanner .banner._1 .typo {width:457px; height:246.5px; margin:-123.25px 0 0 -228.5px;}
+}
+
+@media screen and (max-width:1080px){
+  /*
+  .mainTopBanner .banner._1 .mov {height:800px; padding-bottom:0;}
+  .mainTopBanner .banner._1 .mov video {width:auto; height:100%; left:50%; margin:0 0 0 -712px;}
+  */
+
+  .mainTopBanner .banner._1 {width:100%; height:100%;}
+  .mainTopBanner .banner._1 .mov {height:100% !important; padding-bottom:0 !important;}
+  .mainTopBanner .banner._1 .mov video {width:1920px !important; height:1080px !important; top:50% !important; left:50% !important; margin:-540px 0 0 -960px !important;}
+}
+
+@media screen and (max-width:960px){
+  .mainTopBanner .banner._1 .typo {width:457px; height:311.5px; margin:-155.75px 0 0 -228.5px;}
+  .mainTopBanner .toDown {width:40px; height:40px; bottom:20px; margin:0 0 0 -20px;}
+}
+
+@media screen and (max-width:768px){
+  .mainTopBanner .banner._1 .typo {width:305px; height:207px; margin:-103.5px 0 0 -152.5px;}
+  .mainTopBanner .banner._1 .mov {padding-bottom:80%;}
+  .mainTopBanner .banner._1 .mov video {width:142.5%; height:auto; left:-21.25%;}
+}
+
+@media screen and (max-width:480px){
+  .mainTopBanner .banner._1 .mov {padding-bottom:120%;}
+  .mainTopBanner .banner._1 .mov video {width:213.5%; left:-56.75%;}
+}
+
+
+
+/*-----파트너스 로고영역-----*/
+.partnerLogos {
+  margin: 80px auto 0;
+}
+.partnerLogos .logos ul {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.partnerLogos .logos ul li {
+  display: block;
+  float: left; width: 20%;
+  position: relative;
+  margin: 15px 0;
+  padding: 0;
+  text-align: center;
+}
+.partnerLogos .logos ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.partnerLogos .logos ul li a img {
+  max-width: 100%;
+}
+
+@media screen and (max-width:768px){
+  .partnerLogos .logos {margin:30px auto 0;}
+  .partnerLogos .logos ul li {width:33%;}
+}

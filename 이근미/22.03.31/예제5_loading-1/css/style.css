@@ -1,0 +1,101 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body {
+  background: black;
+}
+
+@keyframes spinner-1 {
+  from{
+    transform: scale(1.6) rotate(0deg);
+  }
+  to {
+    transform: scale(1.6) rotate(360deg);
+  }
+}
+
+@keyframes spinner-2 {
+  from{
+    transform: scale(1.2) rotate(0deg);
+  }
+  to {
+    transform: scale(1.2) rotate(-360deg);
+  }
+}
+
+@keyframes text-ani {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* 100vw */
+  height: 100%; /* 100vh */
+}
+
+#spinner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+#spinner p {
+  font-size: 10px;
+  text-transform: capitalize;
+  letter-spacing: -0.3px;
+  color: white;
+  z-index: 500;
+  animation-name: text-ani;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#spinner div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 100%;
+  box-sizing: border-box;
+  border-width: 3px;
+  border-style: solid;
+}
+
+#spinner div:nth-of-type(1) {
+  /* border: 3px solid rgba(110,240,50, .2); */
+  border-color: rgba(110,240,50, .2);
+  animation-name: spinner-1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#spinner div:nth-of-type(2) {
+  /* border: 3px solid rgba(110,240,50, .8); */
+  border-color: rgba(110,240,50, 1);
+  animation-name: spinner-2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#spinner div::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(.2) scaleY(1.2);  /*transform: scale(.2, 1.2);*/
+  background: black;
+}

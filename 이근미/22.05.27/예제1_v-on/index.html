@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>vue.js v-bind</title>
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <ul id="menu">
+          <li v-for="list in menuList">
+            <a v-bind:href="list.ahref">{{list.menu}}</a>
+          </li>
+        </ul>
+      </header>
+      <main v-bind:class="{on:isActive}">
+        <div class="container">
+        </div>
+        <button id="banner-btn" v-on:click="toggleElem">{{bannerToggleText}}</button>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <h3><a href="#">logo</a></h3>
+          <ul id="f-menu">
+            <li v-for="list in fMenuList">
+              <a v-bind:href="list.ahref">{{list.menu}}</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: '#app',
+        data: {
+          isActive: false,
+          // 메인배너버튼 텍스트를 변수로 만들고
+          // document의 element(#banner-btn)에 적용하시오.
+          // defaut(초기값) : close
+          bannerToggleText: 'close',
+          count: 0,
+          menuList: [
+            {menu: 'company', ahref: 'http://naver.com'},
+            {menu: 'product', ahref: 'http://naver.com'},
+            {menu: 'gallery', ahref: 'http://naver.com'},
+            {menu: 'location', ahref: 'http://naver.com'}
+          ],
+          fMenuList: [
+            {menu: 'company', ahref: 'http://naver.com'},
+            {menu: 'product', ahref: 'http://naver.com'},
+            {menu: 'gallery', ahref: 'http://naver.com'},
+            {menu: 'notice', ahref: './community/notice.html'},
+            {menu: 'faq', ahref: './community/faq.html'}
+          ],
+          bgChange: [
+            {bg:'./img/main_banner01.jpg', title:'bg01'},
+            {bg:'./img/main_banner02.jpg', title:'bg02'},
+            {bg:'./img/main_banner03.jpg', title:'bg03'},
+            {bg:'./img/main_banner04.jpg', title:'bg04'},
+            {bg:'./img/main_banner05.jpg', title:'bg05'}
+          ]
+        },
+        methods: {
+          toggleElem: function(){
+            console.log(event.currentTarget);
+            event.currentTarget.classList.toggle('on');
+            this.isActive = !this.isActive;
+
+            // // console.log('click');
+            // // console.log(this.isActive);
+            // console.log(`변경전>>>${this.isActive}`);
+            // this.isActive = !this.isActive;
+            // console.log(`변경후>>>${this.isActive}`);
+            // // click할때마다 close와 open 텍스트 번갈아가며 노출시키기
+            if (this.bannerToggleText == 'close') { //배너기 열려있을 떄
+              this.bannerToggleText = 'open';
+              // this.count++;
+              // if(this.count > 4){
+              //   this.count = 0;
+              // }
+              if(this.count == this.bgChange.length -1){
+                this.count = 0;
+              }else {
+                this.count++;
+              }
+            }
+            else { //배너가 닫혀있을 때
+              this.bannerToggleText = 'close';
+              document.body.querySelector('.container').style.backgroundImage = `url("${this.bgChange[this.count].bg}")`;
+              // document.body.querySelector('.container').style.background = `url("${this.bgChange[1].bg}")`;
+            }
+
+            // // if (this.isActive == true) {
+            // //   this.bannerToggleText = 'open';
+            // // }
+            // // else {
+            // //   this.bannerToggleText = 'close';
+            // // }
+            //
+            // // if (this.isActive) {
+            // //   this.bannerToggleText = 'open';
+            // // }
+            // // else {
+            // //   this.bannerToggleText = 'close';
+            // // }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

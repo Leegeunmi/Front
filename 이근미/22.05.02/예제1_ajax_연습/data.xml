@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wrap>
+  <item>
+    <link>http://naver.com</link>
+    <title>title</title>
+    <date>22.05.12</date>
+    <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</description>
+  </item>
+  <item>
+    <link>http://naver.com</link>
+    <title>title</title>
+    <date>22.05.12</date>
+    <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</description>
+  </item>
+</wrap>

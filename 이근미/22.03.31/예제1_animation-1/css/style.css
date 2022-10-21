@@ -1,0 +1,106 @@
+@charset "UTF-8";
+.box {
+  position: absolute;
+  display: flex; /**/
+  justify-content: center;/**/
+  align-items: center;  /*3셋 가운데 정렬*/
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid orange;
+  /* animation */
+  animation-name: rotate; /*지정이름 자유*/
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  /* animation: rotate 2s liner forwards; */
+}
+
+.box:nth-child(1){
+  animation-name: rotate1;
+}
+
+.box:nth-child(2){
+  animation-name: rotate2;
+  top: 100px;
+
+}
+
+.box:nth-child(3){
+  animation-name: rotate3;
+  top: 200px;
+}
+
+
+.box h1 {
+  font-size: 14px;
+}
+
+@keyframes rotate1 {
+  from {
+    /*변화코드 입력 영역*/
+    left: 0;
+    background: orange;
+  }
+  50% {
+    /*변화코드 입력 영역*/
+    background: beige;
+    transform: rotate( 360deg );
+  }
+  to {
+    /*변화코드 입력 영역*/
+    left: calc(100% - 100px);
+    background: orange;
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    /*변화코드 입력 영역*/
+    left: 100px;
+    top: 200px;
+    background: orange;
+  }
+  50% {
+    /*변화코드 입력 영역*/
+    background: beige;
+    transform: rotate( 360deg );
+  }
+  to {
+    /*변화코드 입력 영역*/
+    left: calc(100% - 100px);
+    background: orange;
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    /*변화코드 입력 영역*/
+    left: 0;
+    top: 200px;
+    background: orange;
+  }
+  50% {
+    /*변화코드 입력 영역*/
+    background: beige;
+    transform: rotate( 360deg );
+  }
+  to {
+    /*변화코드 입력 영역*/
+    left: calc(100% - 100px);
+    background: orange;
+  }
+}
+
+
+
+  /*
+  0% {}
+  25% {}
+  50% {}
+  100% {} */
+}

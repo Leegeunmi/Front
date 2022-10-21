@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*table style*/
+.table-wrap {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.table-wrap table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.table-wrap table td,.table-wrap table th {
+  border: 1px solid black;
+  height: 28px;
+  line-height: 28px;
+}
+
+.table-wrap table th {
+  background: #f9f9f9;
+}
+
+.table-wrap table tr:first-child th, .table-wrap table tr:last-child th {
+  background: skyblue;
+  color: white;
+  height: 36px;
+  line-height: 36px;
+}

@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>HAY rotate page</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <!-- <h1><a href="#"><img src="./img/logo.svg" alt="Heineken"></a></h1> -->
+        <h1><a href="./">HAY</a></h1>
+        <nav id="gnb">
+          <ul>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Lighting</a></li>
+            <li><a href="#">Archive</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <!-- 작은 썸네일이미지 -->
+          <nav id="pagenation">
+            <ul>
+              <li class="active"><img src="./img/img01.png" alt="img01" title="REY CHAIR"></li>
+              <li><img src="./img/img02.png" alt="img02" title="PALISSADE CHAIR"></li>
+              <li><img src="./img/img03.png" alt="img03" title="LOUNGE CHAIR"></li>
+              <li><img src="./img/img04.png" alt="img04" title="BALCONY CHAIR"></li>
+            </ul>
+          </nav>
+          <!-- 큰이미지 노출영역 -->
+          <div class="items change-img">
+            <img src="./img/img01.png">
+          </div>
+          <!-- 이미지 설명 영역 -->
+          <div class="items text">
+            <h2>"REY CHAIR"</h2>
+            <p class="desc">With its distinctive rounded corners and curved back, it is the first chair to be patented for its unique threadless wood and metal connection.</p>
+            <a href="#" class="btn">discover more</a>
+          </div>
+          <!-- 회전하는 텍스트 -->
+          <div class="rotate-items">
+            <ul>
+              <li style="--i:1;"><span>BALCONY CHAIR</span></li>
+              <li style="--i:2;"><span>LOUNGE CHAIR</span></li>
+              <li style="--i:3;"><span>PALISSADE CHAIR</span></li>
+              <li style="--i:4;"><span>REY CHAIR</span></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="text/javascript">
+    // 변수선언
+    const descArray = [];
+    descArray[0] = 'With its distinctive rounded corners and curved back, it is the first chair to be patented for its unique threadless wood and metal connection.';
+    descArray[1] = 'The steel frames are dipped in molten zinc, forming a resilient coating over the entire steel surface, protecting against corrosion and offering a maintenance-free finish.'
+    descArray[2] = 'Adding extra comfort and functionality to the Balcony collection, the Balcony Cushion has a rectangular shape that fits the seat perfectly.'
+    descArray[3] = 'The wide, square design is softened by the rounded back and slender armrests, with the multiple holes in the seat and back strengthening the construction.'
+    const btn = document.querySelector('.btn');
+    let selectElem = document.querySelectorAll('#pagenation ul li');
+    let textElem = document.querySelector('.text h2');
+    let descElem = document.querySelector('.text .desc');
+    let imgElem = document.querySelector('.change-img img');
+    let rotateElem = document.querySelector('.rotate-items ul');
+    // console.log(selectElem);
+    // console.log(textElem);
+    // console.log(descElem);
+    // console.log(imgElem);
+    // console.log(rotateElem);
+    console.log(descArray);
+    selectElem.forEach((items, i) => {
+      // console.log(`${items},${i}`);
+      items.onclick = function(){
+        console.log(`click!${i}::::${items}`);
+        selectElem.forEach((check) => {
+          check.classList.remove('active');
+        });
+        this.classList.add('active');
+        // change-img(main img), text(main text) 변경
+        let src = items.firstChild.getAttribute('src');
+        let title = items.firstChild.getAttribute('title');
+        // let title = this.firstChild.title;
+        imgElem.setAttribute('src',`${src}`);
+        textElem.innerHTML = `"${title}"`;
+        descElem.innerHTML = `${descArray[i]}`;
+        rotateElem.style.transform = `rotate(${i*90}deg)`;
+      }
+      // pagenation ul li img를 클릭하면 items text의 h2와 desc값이 pagenation ul li내용 순서대로 들어간다.
+    });
+
+    </script>
+  </body>
+</html>

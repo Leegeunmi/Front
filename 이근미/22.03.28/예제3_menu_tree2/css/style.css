@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+ol,ul,li { list-style: none; }
+
+#wrap {
+  width: 1200px;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+#lnb {
+  position: fixed;
+  padding: 20px;
+  width: 300px;
+  height: 100vh;
+  box-sizing: border-box;
+  background: rosybrown;
+  z-index: 300;
+}
+
+
+#lnb h1 a {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#lnb h1 {
+  margin-bottom: 20px;
+}
+
+#container {
+  padding-left: 300px;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+#top-menu {
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+#top-menu ul {
+  overflow: hidden;
+  float: right;
+}
+
+#top-menu ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+#top-menu ul li:first-child {
+  margin-left: 0;
+}
+
+#top-menu ul li a {
+  line-height: 50px;
+}
+
+.contents {
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.contents h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background: #f1f1f1;
+}
+
+/*menu tree management customize style*/
+.menu-tree-management {
+  border: none;
+  background: none;
+  /*background: none   background-color: transparnt*/
+}
+
+.menu-tree-management .title {
+  color: white;
+}
+
+.menu-tree-management input[type=checkbox] + label {
+  color: white;
+}
+
+.menu-tree-management input[type=checkbox]:checked + label {
+  color: white;
+}
+
+.menu-tree-management .table-ctn .menu-tree .submenu > li {
+  color: white;
+}
+
+@media screen and (max-width: 1200px ){
+  #wrap { width: 100%; }
+}
+
+/* @media screen and (max-width: 800px ){
+  #wrap { width: 800px; }
+} */

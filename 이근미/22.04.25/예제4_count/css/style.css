@@ -1,0 +1,24 @@
+@charset "UTF-8";
+html,body { height: 100%;}
+body { background: darkgray; }
+a{ color: Chocolate; }
+
+.flex-box {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.count {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: Sienna;
+  color: lightgreen;
+  transition: .5s;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

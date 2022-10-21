@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>input form</title>
+</head>
+<body>
+  <header>
+    <h1>input form에 대하여 알아보자</h1>
+  </header>
+  <div id="container">
+    <form>
+      <input type="text" id="text1" name="text1" minlength="4" maxlength="8" size="10"><br>
+      <input type="radio" name="k"><span>여성</span>
+      <input type="radio" name="k"><span>남성</span><br>
+      <label for="ch1">chack box label 사용방법</label><br>
+      <input type="checkbox" id="ch1" name="ch1"><br>
+      <input type="checkbox" id="ch2" name="ch2"><br>
+      <input type="search"><br>
+      <input type="submit" value="전송">
+      <!-- fieldset은 쓸일이 많이 없다... -->
+      <fieldset>
+        <legend>날짜 관련 입력 폼</legend>
+        <input type="date"><br>
+        <input type="month"><br>
+        <input type="week"><br>
+        <input type="datetime-local" min="2022-03-18T00:00" max="2022-03-20T00:00">
+        <input type="time">
+      </fieldset>
+      <input type="color"><br>
+      <input type="file"><br>
+      <input type="number"><br>
+      <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"><br>
+      <input type="reset">
+    </form>
+  </div>
+</body>
+</html>

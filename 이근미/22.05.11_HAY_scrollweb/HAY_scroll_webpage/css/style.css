@@ -1,0 +1,756 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+/* html {overflow: hidden;} */
+/*common ui (공통영역)*/
+.button {
+  font-size: 14px;
+  font-weight: 700;
+  height: 22px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 9px 23px;
+  margin: 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background: beige;
+  transition: 0.5s;
+  text-shadow: none;
+  color: Sienna;
+}
+
+.button:hover {
+  background: #2f5fad;
+  color: beige;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 10px;
+  bottom: 10px;
+  background: Sienna;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  opacity: 0;
+  transition: 1s;
+  z-index: 800;
+}
+
+.on {
+  opacity: 1;
+}
+
+.back-to-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+/* mobile button line style (hamburger button)*/
+input[type=checkbox]#gnbcheck {
+  display: none;
+}
+
+#gnbbtn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  right: 10px;
+  z-index: 500;
+  display: none;
+}
+
+#gnbbtn>span {
+  position: absolute;
+  top: 16px;
+  height: 1.6px;
+  width: 32px;
+  background: white;
+  transform: translateY(-50%);
+}
+
+#gnbbtn>span:nth-child(1) {
+  top: 8px;
+}
+
+#gnbbtn>span:nth-child(3) {
+  top: 24px;
+}
+
+/*moblie close button*/
+/* 햄버거버튼 열었다가 닫을 때 X버튼  */
+#mobile-close-btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  right: 10px;
+  display: none;
+}
+
+#mobile-close-btn:before, #mobile-close-btn:after {
+  content: '';
+  position: absolute;
+  height: 1.6px;
+  width: 32px;
+  /*width 100%해도 된다.*/
+  top: 16px;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+#mobile-close-btn:before {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/*header*/
+#header {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  z-index: 800;
+  /* background: Sienna; */
+}
+
+#top-logo {
+  float: left;
+}
+
+#top-logo a {
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 30px;
+  font-size: 33px;
+}
+
+/*gnb*/
+#gnb {
+  float: right;
+}
+
+#gnb ul {
+  overflow: hidden;
+  /*li정렬*/
+}
+
+#gnb ul li {
+  /* float: left; */
+}
+
+#gnb ul li a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+}
+
+#gnb ul li:last-child a {
+  padding: 0 40px 0 15px;
+}
+
+/* #gnb ul li a:hover {
+  color: gold;
+} */
+
+/*section*/
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+section {
+  background: beige;
+  height: 100vh;
+}
+
+section#intro>article {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  bottom: 0;
+  background: Sienna;
+  text-align: center;
+  padding: 20px 20%;
+  color: beige;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+section>article>h2 {
+  font-size: 35px;
+  /* font-family: 'EB Garamond', serif; */
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+section>article>p {
+  font-weight: lighter;
+  margin: 5px 0 12px 0;
+}
+
+section .row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1410px;
+  min-height: 100vh;
+  color: #333333;
+  z-index: 500;
+  box-sizing: border-box;
+}
+
+section .row .column {
+  flex: 25%;
+  margin: 120px 20px;
+  padding-top: 100px;
+}
+
+section .row .column .inner.none-type {
+  border: 0;
+  box-shadow: none;
+  background: none;
+}
+
+section .row .column .inner {
+  text-align: center;
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  background: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+}
+
+section .row .column .inner img {
+  /* 부모영역에 맞게 크기 변경   (+부모영역에서 flex-wrap: wrap;)*/
+  width: 100%;
+}
+
+section .row .column .inner img.shadow {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  border: 1px solid #f1f1f1;
+  box-sizing: border-box;
+  transition: 1s;
+}
+
+section .row .column .inner img.shadow:hover {
+  box-shadow: none;
+}
+
+section .row .column .inner h3 {
+  margin-top: 15px;
+}
+
+/* section row title style */
+section .row>h2 {
+  position: absolute;
+  height: 65px;
+  line-height: 65px;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: Sienna;
+  margin-top: 90px;
+}
+
+/* #new-item .imgbox {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+} */
+
+/* 실습)--
+before, after 가상요소를 사용하여 언더라인을 만들기
+
+공통--
+position: absolute
+x축 가운데 정렬
+
+1번 라인--
+너비:120px
+높이:1px
+배경색:#dddddd
+h2부모요소의 bottom 1px;
+
+2번라인--
+너비:40px
+높이:3px
+배경색:#18d26e
+h2부모요소의 bottom 0px;*/
+section .row>h2::before, section .row>h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+section .row>h2::before {
+  width: 120px;
+  height: 1px;
+  background: Sienna;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+section .row>h2::after {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #2f5fad;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+
+section#intro{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+section#intro .video-box {
+  position: relative;
+  overflow: hidden;
+}
+section#intro .video-box .main-video {
+  object-fit: cover;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* ----실습 */
+/* section#intro {
+  background: url('../img/bg/main-intro-bg.jpg') no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+} */
+
+/* new item */
+#new-item .content-wrap {
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+
+#new-item .innerbox {
+  display: inline-block;
+  position: relative;
+  width: 330px;
+  height: 100%;
+  margin: 0 50px;
+}
+
+.mini-label {
+  background: #2f5fad;
+  color: beige;
+  padding: 9px 12px;
+  position: absolute;
+  left: 30px;
+  z-index: 1000;
+  top: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  transform: rotate(0.03turn);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+}
+
+#new-item .innerbox:hover {
+  opacity: .8;
+  transition: .5s;
+}
+
+#new-item .imgbox {
+  width: 330px;
+  height: 400px;
+  transition: .5s;
+  opacity: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+#new-item .imgbox img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+#new-item .textbox {
+  margin: 15px 0 35px;
+  transition: .5s;
+  opacity: 1;
+}
+
+#new-item .textbox h3 {
+  margin-top: 35px;
+  color: Sienna;
+}
+
+#new-item .textbox p {
+  color: #8c837e;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* furniture */
+#furniture .column {
+  color: #1f1f1f;
+}
+#furniture .column:hover {
+  color: Sienna;
+  opacity: .8;
+  transition: .5s;
+}
+#furniture .column .inner {
+  margin: 35px;
+}
+
+
+p {
+  line-height: 25px;
+}
+
+section#furniture .row {
+  align-items: flex-start;
+}
+
+section#furniture .row .column {
+  margin: 180px 20px 0;
+  padding-top: 0;
+}
+
+section#portfolio .row .column .inner p {
+  text-align: left;
+}
+
+section#portfolio .row .column .inner img {
+  border-radius: 3px;
+}
+
+section#myskill {
+  background: url('../img/bg/my_skill_bg.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section#myskill .row>h2, section#myskill .row .column .inner>p {
+  color: white;
+}
+
+/*progress bar style (skill그래프수치)*/
+.progressbar .items-wrap {
+  overflow: hidden;
+  color: white;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, .3);
+}
+
+.progressbar .items-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.progressbar .items {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+  /* 기본값에서 active될때 수치되게 하기 */
+  width: 300px;
+  /* background: transparent; */
+  background: blue;
+}
+
+.progressbar .items .title {
+  float: left;
+  font-weight: 700;
+}
+
+.progressbar .items .percent {
+  float: right;
+}
+
+.progressbar .items-wrap:nth-of-type(1) .items {
+  background: #E5E3C9;
+}
+
+.progressbar .items-wrap:nth-of-type(2) .items {
+  background: #B4CFB0;
+}
+
+.progressbar .items-wrap:nth-of-type(3) .items {
+  background: #94B49F;
+}
+
+.progressbar .items-wrap:nth-of-type(4) .items {
+  background: #789395;
+}
+
+/*progressbar transition / animaition*/
+section.active .row .column .inner.progressbar .items-wrap:nth-of-type(1) .items {
+  width: 70%;
+  transition: 1s .4s;
+}
+
+section.active .row .column .inner.progressbar .items-wrap:nth-of-type(2) .items {
+  width: 50%;
+  transition: 1s .3s;
+}
+
+section.active .row .column .inner.progressbar .items-wrap:nth-of-type(3) .items {
+  width: 50%;
+  transition: 1s .3s;
+}
+
+section.active .row .column .inner.progressbar .items-wrap:nth-of-type(4) .items {
+  width: 40%;
+  transition: 1s;
+}
+
+/* 아래에서 위로 올라오며 나오게하기-- */
+section .row {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1s;
+}
+
+section.active .row {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* 지그재그로 옆으로 나오게하기---  */
+/* section:nth-child(odd) .row {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+section:nth-child(even) .row {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 1s;
+}
+
+section.active .row {
+  opacity: 1;
+  transform: translateY(0px);
+} */
+/* ----- */
+/* footer area */
+#footer {
+  background: Sienna;
+  color: beige;
+  font-size: 14px;
+}
+
+#footer a, #footer p {
+  color: beige;
+}
+
+/* #footer a:hover {
+  color: gold;
+} */
+
+#footer .column.footer-logo a:hover {
+  color: beige;
+}
+
+#footer .footer-top {
+  background: Sienna;
+  padding: 60px 0 30px;
+}
+
+#footer .container {
+  /* footer-top의 .container와 #footer의 자식요소 .container의 공통 스타일 적용  */
+  width: 1230px;
+  margin: 0 auto;
+}
+
+#footer>.container {
+  padding: 30px 0;
+  text-align: center;
+}
+
+#footer .container .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#footer .container .row .column {
+  flex: 25%;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+#footer .container .row .column.footer-logo h3 {
+  font-size: 40px;
+  font-weight: 700;
+  /*bold*/
+}
+
+#footer .container .row .column h4 {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+/*실습
+h4의 하단에 언더라인 만들기
+1.before after 가상요소 만들기
+2.#555555 #18d26e
+3.h4와 너비가 같다, 60px
+4.h4의 하단에  배치*/
+#footer .container .row .column h4::before, #footer .container .row .column h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+}
+
+#footer .container .row .column h4::before {
+  right: 0;
+  /*width: 100%*/
+  background: beige;
+}
+
+#footer .container .row .column h4::after {
+  width: 90px;
+  background: #2f5fad;
+}
+
+#footer .container .row .column ul li {
+  border-bottom: 1px solid beige;
+  padding: 10px 0;
+}
+
+#footer .container .row .column ul li:nth-child(1) {
+  padding-top: 0;
+}
+
+#footer .container .row .column p {
+  line-height: 26px;
+}
+
+#footer .container .row .column.news input[type=text] {
+  border: 0;
+  padding: 6px 8px;
+  width: 65%;
+  box-sizing: border-box;
+  color: #2f5fad;
+  background: beige;
+}
+
+#footer .container .row .column.news input[type=submit] {
+  border: 0;
+  padding: 6px 0;
+  width: 35%;
+  background: #2f5fad;
+  color: beige;
+  cursor: pointer;
+}
+
+/*media query*/
+@media screen and (max-width: 1200px) {
+  section .row .column {
+    flex: 50%;
+  }
+
+  section#new-item .row .column .inner img {
+    width: 100%;
+  }
+
+  #footer .container {
+    width: 100%;
+  }
+
+  #footer .container .row .column {
+    flex: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section .row .column {
+    flex: 100%;
+  }
+
+  section#ourclients .row .column, section#mytools .row .column {
+    flex: 50%;
+  }
+
+  #footer .container .row .column {
+    flex: 100%;
+  }
+
+  input[type=checkbox]#gnbcheck:checked~#header #gnb {
+    left: 0;
+  }
+
+  #mobile-close-btn {
+    display: block;
+  }
+
+  /* 윈도우창의 가로가 767px밑으로 떨어지면 햄버거 버튼이 생긴다 */
+  #gnbbtn {
+    display: block;
+  }
+
+  #gnb {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: .5s ease-in-out;
+    z-index: 600;
+  }
+
+  #gnb ul {
+    padding-top: 50px;
+  }
+
+  #gnb ul li {
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  section#ourclients .row .column, section#mytools .row .column {
+    flex: 100%;
+  }
+
+  section#new-item .row .column .inner img {
+    width: 50%;
+  }
+}

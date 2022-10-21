@@ -1,0 +1,471 @@
+@charset "UTF-8";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: white;
+  color: #6c757d;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h5 {
+  color: #555555;
+}
+
+/* .container:first-child {
+  margin-top: 50px;
+}
+.container {
+  margin-top: 70px;
+} */
+
+
+
+/* button */
+/* main button */
+.main-page .btn {
+  background: tomato;
+  border: 0;
+  margin-top: 30px;
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.main-page .btn:hover {
+  background: white;
+  color: tomato;
+}
+
+/* nav button */
+.main-page .btn.btn-sm {
+  margin-bottom: 0;
+  background: none;
+  border: 1px solid gray;
+}
+
+.main-page .btn.btn-sm:hover {
+  background: silver;
+  border: 1px solid silver;
+  color: white;
+}
+
+.main-page .container.info .btn {
+  border: 1px solid #6c7542;
+  background: #6c7542;
+  color: white;
+}
+.main-page .container.info .btn:hover {
+  border: 1px solid #6c7542;
+  background: white;
+  color: #6c7542;
+}
+
+/* 메인상단 */
+.main-page .row {
+  margin-left: 0px!important;
+}
+
+.main-page .header.py-3 {
+  padding-bottom: 0 !important;
+}
+
+.main-page .logo h1 {
+  color: #333333;
+  font-weight: bold;
+}
+
+.main-page .my-4header {
+  margin-top: 15px;
+  ;
+  margin-bottom: 0;
+}
+
+.main-page .mb-2 {
+  margin-bottom: 0 !important;
+}
+
+/* 메인슬라이드배너 */
+.main-page .bd-placeholder-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-page .carousel-item:nth-child(1) .bd-placeholder-img {
+  background-image: url("../img/main/slide/rey_detail.jpg");
+}
+
+.main-page .carousel-item:nth-child(2) .bd-placeholder-img {
+  background-image: url("../img/main/slide/pc_4.jpg");
+}
+
+.main-page .carousel-item:nth-child(3) .bd-placeholder-img {
+  background-image: url("../img/main/slide/bottle01.jpg");
+}
+
+.main-page .carousel-caption h1 {
+  font-size: 36px;
+}
+
+.main-page .carousel-caption p {
+  font-size: 18px;
+}
+
+/* 메인고정배너 */
+.main-page .jumbotron.p-4 {
+  flex-wrap: wrap;
+  display: inline-flex;
+  width: 100%;
+  margin-top: 50px;
+  background-color: #27402d;
+  opacity: .95;
+}
+
+.main-page .jumbotron.p-4:hover {
+  background-color: rgba(39, 64, 45, .9);
+}
+
+.main-page .jumbotron.p-md-5 {
+  padding: 1rem !important;
+}
+
+.main-page .jumbotron.p-4 .display-4 {
+  font-weight: bold;
+}
+
+.main-page .jumbotron.p-4 .col-md-6.first-txt h1 {
+  font-size: 6.5rem;
+  float: right;
+  padding-right: 22%;
+  margin-bottom: 11px;
+}
+
+.main-page .jumbotron.p-4 .lead.my-3 {
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.main-page .col-md-6.secondtxt {
+  padding-top: 20px;
+}
+
+.main-page .col-md-6.secondtxt p {
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.main-page .col-md-6.secondtxt p:nth-child(1) {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.main-page .col-md-6.secondtxt p:nth-child(3) {
+  font-size: 14px;
+  letter-spacing: 2px;
+  opacity: .5;
+}
+
+/* .sub-page .jumbotron.p-4 {
+  background-color: #27402d;
+  margin-top: 50px;
+} */
+
+
+/* 아이템 이미지카드 */
+.main-page .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-page .card-body {
+  padding-bottom: 80px;
+  position: relative;
+}
+
+.main-page .col {
+  padding-bottom: 15px;
+}
+
+.main-page .card-1 .row .col .card, .main-page .card-2 .row .col .card {
+  min-height: 100%;
+}
+
+.main-page .container .row .col .card .card-body .btn {
+  border: 1px solid tomato;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.main-page .container .row .col .card .card-body .btn:hover {
+  border: 1px solid tomato;
+  background: white;
+  color: tomato;
+}
+
+.main-page .card-text {
+  /* flex-wrap: wrap; */
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* 3개 card item-footer*/
+.main-page .item-footer {
+  display: flex;
+  margin-top: 28px;
+  position: absolute;
+  bottom: 20px;
+}
+
+/* 아이템 컬러정보 */
+.main-page .item-footer .color-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-top: 8px;
+  background-color: pink;
+}
+
+/* 3개 card - 1번 컬러정보 */
+.main-page .item-1 .color-circle:nth-of-type(1) {
+  background: #6f9c59;
+}
+
+.main-page .item-1 .color-circle:nth-of-type(2) {
+  background: #db8325;
+}
+
+.main-page .item-1 .color-circle:nth-of-type(3) {
+  background: #489fc2;
+}
+
+/* 3card -2번 컬러정보 */
+.main-page .item-2 .color-circle:nth-of-type(1) {
+  background: pink;
+}
+
+.main-page .item-2 .color-circle:nth-of-type(2) {
+  background: gold;
+}
+
+.main-page .item-2 .color-circle:nth-of-type(3) {
+  background: OrangeRed;
+}
+
+/* 3card -3번 컬러정보 */
+.main-page .item-3 .color-circle:nth-of-type(1) {
+  background: #015e75;
+}
+
+.main-page .item-3 .color-circle:nth-of-type(2) {
+  background: #6c7542;
+}
+
+.main-page .item-3 .color-circle:nth-of-type(3) {
+  background: #d9d8c5;
+}
+
+.main-page .item-3 .color-circle:nth-of-type(4) {
+  background: red;
+}
+
+.main-page .item-3 .color-circle:nth-of-type(5) {
+  background: black;
+}
+
+/* 2개 card - 1번 컬러정보 */
+.main-page .card-2 .first .color-circle:nth-of-type(1) {
+  background: #135887;
+}
+
+.main-page .card-2 .first .color-circle:nth-of-type(2) {
+  background: #945023;
+}
+
+.main-page .card-2 .first .color-circle:nth-of-type(3) {
+  background: orangered;
+}
+
+.main-page .card-2 .second .color-circle:nth-of-type(1) {
+  background: silver;
+}
+
+.main-page .card-2 .second .color-circle:nth-of-type(2) {
+  background: #6c7542;
+}
+
+.main-page .card-2 .second .color-circle:nth-of-type(3) {
+  background: black;
+}
+
+
+/* info 영역 */
+.main-page .container.info .card {
+  border: 0;
+}
+.main-page .container.info h1 {
+  color: #333333;
+  font-weight: 400;
+}
+.main-page .container.info .lead {
+  font-weight: 400;
+  font-size: 18px;
+}
+.main-page .container.info .txt {
+  font-size: 15px;
+}
+.main-page .info .row.first {
+  margin-top: 50px!important;
+}
+.main-page .info .row.second {
+  margin-top: 0!important;
+}
+.main-page .info .row.second .col {
+  padding-bottom: 0;
+}
+
+/* 메인컨텐츠 */
+.main-page .w-100 {
+  margin: 50px auto;
+  background: rgba(0, 0, 0, .125);
+  height: 1px;
+}
+
+.main-page .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main-page .container>h3 {
+  text-align: left;
+  line-height: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  color: #333333;
+}
+
+.main-page .container .row {
+  margin-top: 20px;
+}
+
+.main-page .container h3 {
+  margin-top: 50px;
+}
+
+.main-page .jumbotron.transparent {
+  background: none;
+}
+
+.main-page .jumbotron.position-mid {
+  padding: 0 2rem;
+}
+
+.main-page .jumbotron.right-text {
+  text-align: right;
+}
+
+.main-page .carousel-item {
+  height: 32rem;
+}
+
+.main-page #footer {
+  padding-top: 120px!important;
+}
+.main-page #footer .row {
+  display: flex;
+  justify-content: space-between;
+}
+.main-page #footer .col-md {
+  flex-basis: 120px;
+  flex-grow: 0;
+}
+
+@media (max-width: 1200px) {
+  .main-page .info .row.first {
+    max-height: 450px;
+  }
+  .main-page #footer {
+    padding-top: 120px!important;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .main-page .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-page .item-footer {
+    flex-direction: column;
+  }
+  .main-page .card-body {
+    padding-bottom: 100px;
+    position: relative;
+  }
+  .main-page .info .row.first {
+    max-height: 575px;
+  }
+  .main-page #footer {
+    padding-top: 80px!important;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    min-width: 575px;
+  }
+  /* .main-page {
+    width: 768px;
+    max-width: none!important;
+  } */
+  .main-page .col {
+    padding-bottom: 50px;
+  }
+  .main-page .card-2 .row.first .col:nth-child(2) {
+    padding-bottom: 30px;
+  }
+  .main-page .info .row .col {
+    padding-bottom: 0;
+  }
+  .main-page .info .row .col .jumbotron {
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .main-page .info .row.first {
+    max-height: 880px;
+  }
+  .main-page .info .row.first h1 {
+    margin-top: 15px;
+  }
+  .main-page .info .row.second {
+    margin-top: 0;
+  }
+  .main-page .info .row.second .w-100 {
+    margin-bottom: 1.8rem;
+  }
+  .main-page #footer {
+    padding-top: 120px!important;
+  }
+  .main-page #footer .col-12 {
+    display: none;
+  }
+}

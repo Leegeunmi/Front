@@ -1,0 +1,93 @@
+@charset "UTF-8";
+#header {
+  border-bottom: 1px solid green;
+  /* padding: 0 0 0 0;
+  padding: 0 0 0; */
+  padding: 0 15px;
+  overflow: hidden;
+  /* 아래에 float: 때문에 줄이 위로 올라가는데 overflow로 강제로 고정시킴 */
+}
+
+#gnb {
+  float: right;
+}
+
+#gnb ul {
+  overflow: hidden;
+}
+
+#gnb ul li {
+  float: left;
+  height: 60px;
+  margin-right: 10px;
+}
+#gnb ul li:last-child{
+  /* 가장 마지막에 있는 자식요소 menu6를 지정 */
+  margin-right: 0;
+  /* 0일때는 px없이 그냥 0하면 된다. */
+}
+/* #gnb ul li:first-child{
+  margin-left: 50px;
+} */
+
+/* menu1만 red로 바꾸 */
+/* #gnb ul li:first-child a{
+  color: red;
+} */
+
+#gnb ul li a {
+  line-height: 60px;
+}
+#container {
+  width: 1200px;
+  /* 0 -> 탑과 바텀  auto -> 좌우 */
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+#container section {
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+#container section .items{
+  text-align: center;
+  float: left;
+  /* 방법2)아래 */
+  /* width: calc( 25% - 82px); */
+  /* 방법1)아래 */
+  /* width: 25%; */
+  /* box-sizing: border-box; */
+  width: calc(25% - 10px);
+  /* width: 25%; */
+  height: 100px;
+  border: 1px solid green;
+  padding: 10px 20px;
+  margin-right: 10px;
+  /*위 padding내용을 풀어쓰면 아래내용
+  padding-top: : 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-right: 20px; */
+  box-sizing: border-box;
+}
+#container section .items:last-child{
+  margin-right: 0px;
+}
+#container h2 {
+  text-align: center;
+  color: #666666;
+  padding: 30px 0 15px;
+  border-bottom: 1px solid green;
+  margin-bottom: 15px;
+}
+#footer{
+  text-align: center;
+  border-top: 1px solid green;
+}
+#footer .inner{
+  width: 1200px;
+  margin: 0 auto;
+  background: green;
+  color: white;
+}

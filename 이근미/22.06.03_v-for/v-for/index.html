@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <ul id="menu">
+          <li v-for="list in menuList">
+            <a v-bind:href="list.ahref">{{list.menu}}</a>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container">
+          {{menuList[0].menu}}{{menuList[0].href}}
+          {{menuList[1].menu}}{{menuList[1].href}}
+          {{menuList[2].menu}}{{menuList[2].href}}
+          {{menuList[3].menu}}{{menuList[3].href}}
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <h3><a href="#">logo</a></h3>
+          <ul id="f-menu">
+            <li v-for="list in fMenuList">
+              <a v-bind:href="list.ahref">{{list.menu}}</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

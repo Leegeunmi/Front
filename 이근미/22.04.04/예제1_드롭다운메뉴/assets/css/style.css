@@ -1,0 +1,270 @@
+@charset "UTF-8";
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+input[type="checkbox"]#gnbcheck {
+  display: none;
+}
+
+#gnbbtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 800;
+  display: none;
+}
+
+#gnbbtn > span {
+  position: absolute;
+  top: 16px;
+  height: 1.6px;
+  width: 100%;
+  transform: translateY(-50%);
+  background: red;
+}
+
+#gnbbtn > span:nth-child(1) {
+  top: 8px;
+}
+
+#gnbbtn > span:nth-child(3) {
+  top: 24px;
+}
+
+/* 전체레이아웃 */
+.wrap {
+  position: relative;
+  width: 100rem;
+  min-width: 230px;
+  margin: 0 auto;
+}
+
+/* 상단영역 */
+.header {
+  position: relative;
+  height: 10rem;
+  background: skyblue;
+}
+
+.logo {
+  position: absolute;
+  display: block;
+  width: 15rem;
+  height: 10rem;
+  left: 0;
+  top: 0;
+  color: #fff;
+  line-height: 10rem;
+  text-align: center;
+  background: #000000;
+  text-transform: uppercase;
+}
+
+.logo:hover {
+  color : yellow;
+}
+
+/* 메인메뉴 */
+.gnb {
+  z-index: 500;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+}
+
+.mainmenu {
+  position: relative;
+  width: 80rem;
+  height: 6rem;
+  background: #000;
+  /* overflow: hidden; */
+}
+
+.mainmenu > li {
+  position: relative;
+  width: 25%;
+  float: left;
+}
+
+.mainmenu > li > a {
+  position: relative;
+  display: block;
+  line-height: 6rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: white;
+  transition: background .5s;
+  z-index: 800px;
+}
+
+.mainmenu > li:hover > a {
+  background: red;
+}
+
+/*대분류에 마우스 올렸을때*/
+
+.mainmenu > li:hover > .submenu {
+  display: block;
+  animation-name: dropdown;
+  animation-duration: .5s;
+  animation-timing-function:linear;
+}
+
+/*커서올렸을때 모든 서브메뉴 열기*/
+/* .gnb:hover .submenu {
+  display: block;
+} */
+
+.submenu {
+  position: relative;
+  background: #000000;
+  display: none;
+}
+
+.submenu a {
+  display: block;
+  line-height: 4rem;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+  transition: .5s
+}
+
+.submenu li a:hover {
+  background: red;
+}
+
+@keyframes dropdown {
+  from{
+    opacity: 0;
+    top: -15px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* 메인영역 */
+.main {
+  position: relative;
+}
+
+.slide {
+  position: relative;
+  height: 30rem;
+  background: orange;
+}
+
+.board {
+  position: relative;
+  background: green;
+  overflow: hidden;
+}
+
+.board > div {
+  position: relative;
+  width: 33.333%;
+  height: 20rem;
+  float: left;
+}
+
+.notice {
+  background: rgba(0,0,0, .5);
+}
+
+.gallery {
+  background: rgba(0,0,0, .1);
+}
+
+.banner {
+  background: rgba(0,0,0, .8);
+}
+
+/* 하단영역 */
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.f-left {
+  width: 15%;
+  height: 10rem;
+  color: #ffffff;
+  float: left;
+  background: #000;
+}
+
+.f-right {
+  position: relative;
+  width: 85%;
+  height: 10rem;
+  float: left;
+  background: gray;
+}
+
+.f-menu {
+  position: relative;
+  height: 5rem;
+  background: rgba(255,255,255, .5);
+}
+
+.f-copy {
+  position: relative;
+  height: 5rem;
+  background: rgba(255,255,255, .7);
+}
+
+/* 반응형코드 */
+@media all and (max-width: 1200px) {
+  .wrap {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+}
+
+@media all and (max-width: 960px) {
+  #mobile-close-btn {
+    display: block;
+  }
+}
+
+#gnbbtn {
+  display: block;
+}
+
+input[type=checkbox]#gnbcheck:checked ~ .header .gnb {
+  left: 0;
+}
+
+.gnb {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 80%;
+  left: -100%;
+  background: rgba(0,0,0,.8);
+  transition: 0.5s ease-in-out;
+  z-index: 900px;
+}
+
+.gnb ul.mainmenu {
+  padding-top: 50px;
+  width: 100%;
+}
+
+.gnb ul.mainmenu li {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0px;
+}

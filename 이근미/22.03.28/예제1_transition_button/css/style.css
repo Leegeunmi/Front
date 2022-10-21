@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+h2 {
+  margin: 30px 0;
+  color: #333333;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 0 0 10px;
+  color: #666666;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h4 {
+  margin: 0 0 5px;
+  color:  #666666;
+}
+
+#wrap {
+  min-height: 100vh; /*배경이 화면에 꽉 찰 수 있게 (min-height해야 스크롤을 내려도 계속 배경이 보인다)*/
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient( to bottom right, honeydew,linen);
+  /* background: linear-gradient(0deg, rgba(255,228,193,1) 0%, rgba(195,255,231,1) 100%); */
+  background: radial-gradient(circle, rgba(251,205,63,1) 0%, rgba(232,255,227,1) 100%);
+}
+
+.items {
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  위아래 두가지의 펼치는 방식*/
+  background: #f1f1f1;
+  box-shadow: inset 0px 0px 5px rgba(0,0,0.2);
+  overflow: hidden;
+  /*box-shadow : x축  y축  번짐정도  색상*/
+  /*inset: 안쪽으로(inner shadow)*/
+  transition: .5s; /*자연스럽게 색상변화*/
+}
+
+.switch .slider::before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  left: 4px;
+  background: white;
+  box-shadow: 0px 0px 5px rgba(0,0,0.2);
+  transition: .5s; /*자연스럽게 박스
+  이동*/
+}
+
+/* round type */
+.switch.round .slider {
+  border-radius: 17px;
+}
+
+.switch.round.big .slider { /*빅사이즈는 비율에 맞춰 라운딩 더 주기*/
+  border-radius: 19px;
+}
+
+
+.switch.round .slider::before {
+  border-radius: 50%;
+}
+
+/* size type */
+/*big size*/
+.switch.big {
+  width: 64px;
+  height: 38px;
+}
+.switch.big .slider::before {
+  width: 30px;
+  height: 30px;
+}
+
+/*normal size*/
+.switch.normal {
+  width: 60px;
+  height: 34px;
+}
+.switch.normal .slider::before {
+  width: 26px;
+  height: 26px;
+}
+
+/* medium */
+.switch.medium {
+  width: 56px;
+  height: 30px;
+}
+
+.switch.medium .slider::before {
+  width: 22px;
+  height: 22px;
+}
+
+/*small*/
+.switch.small {
+  width: 52px;
+  height: 26px;
+}
+
+.switch.small .slider::before {
+  width: 18px;
+  height: 18px;
+}
+
+/*tiny*/
+.switch.tiny {
+  width: 48px;
+  height: 22px;
+}
+
+.switch.tiny .slider::before {
+  width: 14px;
+  height: 14px;
+}
+
+/*color type*/
+.switch.color-1 >input:checked + .slider {
+  background-color: palegoldenrod;
+}
+.switch.color-2 >input:checked + .slider {
+  background-color: yellow;
+}
+.switch.color-3 >input:checked + .slider {
+  background-color: orange;
+}
+
+/* switch button 작동 */
+.switch > input {
+  display: none;
+}
+
+.switch > input:checked + .slider {
+  background-color: seagreen;
+}
+
+.switch > input:checked + .slider::before {
+  left: 30px;
+}

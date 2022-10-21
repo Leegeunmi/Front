@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.bouncingball {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 50px;
+  background: #42f57b;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    top: 140px;
+    animation-timing-function: ease-out;
+  }
+  55% {
+    top: 160px; /* 바닥에 닿을 때 */
+    height: 120px; /* 찌그러지는 공 */
+    animation-timing-function: ease-in;
+  }
+  65%{
+    top: 120px;
+    height: 140px; /* 원래 상태로 돌아감 */
+  }
+  100% {
+    top: 0;
+  }
+}

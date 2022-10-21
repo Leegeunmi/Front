@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <title>main</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 전역 컴포넌트로 변경 -->
+    <header>
+      <header-logo></header-logo>
+      <ul id="gnb">
+        <!-- v-for로 변경 -->
+        <li v-for="list in menuList">
+          <a v-bind:href="list.ahref">{{list.text}}</a>
+        </li>
+        <!-- <li><a href="product.html"></a>product</li>
+        <li><a href="gallery.html"></a>gallery</li>
+        <li><a href="notice.html"></a>notice</li> -->
+      </ul>
+    </header>
+    <main>
+      <div class="container">
+        index page
+      </div>
+    </main>
+    <footer>
+      <div class="inner">
+        <!-- 전역컴포넌트로 변경 -->
+        <footer-header></footer-header>
+        <!-- 지역컴포넌트로 변경 -->
+        <footer-list></footer-list>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+
+</html>

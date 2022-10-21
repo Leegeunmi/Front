@@ -1,0 +1,74 @@
+@charset "UTF-8";
+.wrap-box {
+  position: relative;
+  margin-top: 500px;
+  width: 800px;
+  height: 800px;
+  background: gray;
+}
+
+.box {
+  position: relative; /*초기영역을 유지한다.*/
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  background: red;
+  top: -100px; /*위치가 고정되어 있어서 움직이지 않는다. 상대적위치를 이용해야한다_ position: relative;  초기에 가지고 있던 영역은 유지한다. - 마이너스값을 주면 이동하여 화면 밖으로 나간다.*/
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+
+.box.rel {
+  position: relative;
+}
+
+.box.abs {
+  position: absolute; /*중요) 부모요소 중 static이 아닌 position 속성을 갖고 있는 요소의 기준으로 위치 값을 갖는다.*/
+  top: 0;
+}
+
+.box.abs:nth-child(1) {
+  /* z-index: 50; */
+  top: 450px;
+  left: 225px;
+  height: 300px;
+  width: 300px;
+  border-radius: 20%;
+  background: #211d19;
+}
+
+.box.abs:nth-child(2) {
+  top: 400px;
+  left: 250px;
+  height: 300px;
+  border-radius: 100%;
+  background: #ffe0cf;
+}
+
+.box.abs:nth-child(3) {
+  top: 400px;
+  left: 225px;
+  height: 140px;
+  width: 300px;
+  border-radius: 30%;
+  background: #211d19;
+}
+
+.box.abs:nth-child(4) {
+  top: 560px;
+  left: 310px;
+  height: 25px;
+  width: 20px;
+  border-radius: 100%;
+  background: #211d19;
+}
+
+.box.abs:nth-child(5) {
+  top: 560px;
+  left: 420px;
+  height: 25px;
+  width: 20px;
+  border-radius: 100%;
+  background: #211d19;
+}

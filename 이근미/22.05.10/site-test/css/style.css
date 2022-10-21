@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+a {
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+/*header---*/
+#header-wrap {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 800;
+  background: rgba(0, 0, 0, .2);
+}
+
+#header-wrap .header {
+  width: 100%;
+  max-width: 1830px;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 15px;
+  box-sizing: border-box;
+}
+
+#header-wrap .inner {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#header-wrap .header .logo {
+  display: block;
+  width: 96px;
+  height: 65px;
+  z-index: 5;
+}
+
+#header-wrap .header .logo img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+#header-wrap .header .hamburger {
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin: -16px 0 0 0;
+}
+
+#header-wrap .header .hamburger img {
+  display: block;
+  max-width: 100%;
+  vertical-align:
+}
+
+/*gnb*/
+#header-wrap .gnbWrap ul li a {
+  display: inline-block;
+  width: auto;
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  opacity: 0.6;
+}
+
+/*section*/
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+section:nth-child(even) {
+  background: beige;
+}
+
+.mainTopBanner {
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .mainTopBanner .banner {
+  width: 100%;
+  height: 1080px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+} */
+
+.mainTopBanner .banner {
+  height: auto;
+}
+
+.mainTopBanner .banner .mov {
+  width: 100%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  padding-bottom:56.25%;
+}
+
+.mainTopBanner .banner .mov video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mainTopBanner .banner .typo {
+  width: 914px;
+  height: 493px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -246.5px 0 0 -457px;
+}
+
+.mainTopBanner .banner .typo img {
+  width: 100%;
+}
+
+section>article>img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section>article .button {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1280px) {
+  .mainTopBanner .banner._1 .typo {
+    width: 457px;
+    height: 246.5px;
+    margin: -123.25px 0 0 -228.5px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #header-wrap .header {
+    padding: 25px 15px;
+  }
+
+  #header-wrap .header .logo {
+    width: 50px !important;
+    height: 34px !important;
+    position: relative;
+  }
+
+  #header-wrap .header .hamburger {
+    width: 16px !important;
+    height: 16px !important;
+    margin: -8px 0 0 0 !important;
+    right: 10px;
+  }
+
+  .mainTopBanner .banner {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mainTopBanner .banner .mov {
+    height: 100%;
+    padding-bottom: 0;
+  }
+
+  .mainTopBanner .banner .mov video {
+    width: 1920px;
+    height: 1080px;
+    top: 50%;
+    left: 50%;
+    margin: -540px 0 0 -960px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .img {
+    display: block;
+  }
+  .mainTopBanner .banner .typo {
+    width: 457px;
+    height: 331.5px;
+    margin: -155.75px 0 0 -228.5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainTopBanner .banner .typo {
+    width: 305px;
+    height: 207px;
+    margin: -103.5px 0 0 -152.5px;
+  }
+}

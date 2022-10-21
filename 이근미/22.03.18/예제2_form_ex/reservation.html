@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>car reservation</title>
+  </head>
+  <body>
+    <h1>자동차 대여 예약</h1>
+    <form>
+      <ul>
+        <!-- 대여자 -->
+        <li>
+          <!-- for는 id와 연결되어있다. -->
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" placeholder="8~12자 까지">
+        </li>
+        <li>
+          <label for="count">인원</label>
+          <select id="count" name="count">
+            <!-- option[value=$]{$}*4  ctrl e-->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </li>
+        <li>
+          <label for="phone">전화번호</label>
+          <input type="tell" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"placeholder="010-0000-0000">
+        </li>
+        <li>
+          <label for="kindofcar">차량종류</label>
+          <select id="kindofcar" name="kindofcar">
+            <option value="sonata">sonata</option>
+            <option value="BMW">BMW</option>
+            <option value="kona">kona</option>
+            <option value="morning">morning</option>
+          </select>
+        </li>
+        <li>
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="aaa@bbb.com">
+        </li>
+        <li>
+          <label for="reservdate">예약날짜</label>
+          <input type="datetime-local" id="reservdate" name="reservdate" min="2022-03-01T00:00" max="2022-03-05T00:00">
+        </li>
+        <li>
+          <label for="returndate">반납날짜</label>
+          <input type="datetime-local" id="returndate" name="returndate" min="2022-03-06T00:00" max="2022-03-08T00:00">
+        </li>
+      </ul>
+      <button type="submit">예약하기</button>
+    </form>
+  </body>
+</html>

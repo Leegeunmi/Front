@@ -1,0 +1,6 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0;}
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+a {color: #666666; text-decoration: none;}
+body {background: lightgray;}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>jquery</title>
+  <link rel="stylesheet" href="./css/initial.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- 파일 다운로드 로컬에서 적용 -->
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <!-- 최신라이브러리 가져오기(CDN) (최신버전은 버그걱정 추천하지않음)-->
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> -->
+  <!-- 버전별 라이브러리 가져오기 (CDN-분산네트웍방식) -->
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- <script type="text/javascript"> -->
+  <!-- // $() -> dom요소를 활성화하겠다 ex) $(document).~()
+      //window.onload = function(){} -> 아래 코드와 유사 (javascript에서 표기방법)
+    //   $(document).ready(function(){
+    //     console.log('test');
+    //   });
+    //   // 위 아래가 같은 의미
+    //   $(function(){
+    //     console.log('축약형');
+    //   })
+    //   alert('hello jquery')
+    // </script>  -->
+  <script type="text/javascript" src="./js/common.js"></script>
+</head>
+
+<body>
+  <!-- tag, id값으로 선택 -->
+  <!-- <ul>
+      <li id="first">text1</li>
+      <li id="second">text1</li>
+      <li id="third">text1</li>
+      <li id="fourth">text1</li>
+    </ul> -->
+
+  <!-- class값으로 선택 -->
+  <!-- <ul>
+      <li class="first">text1</li>
+      <li class="second">text1</li>
+      <li class="third">text1</li>
+      <li class="fourth">text1</li>
+    </ul> -->
+
+  <!-- 자손선택 -->
+  <!-- <ul>
+      <li class="first">
+        <span>안녕하세요.</span>
+        <p>
+          저는 홍길동입니다.
+          <span>저는 20살입니다.</span>
+        </p>
+        text1
+      </li>
+      <li class="second">
+        <span>안녕하세요.</span>
+        <p>
+          저는 홍길동입니다.
+          <span>저는 20살입니다.</span>
+        </p>
+        text2</li>
+        <li class="third">
+          <span>안녕하세요.</span>
+          <p>
+            저는 홍길동입니다.
+            <span>저는 20살입니다.</span>
+          </p>
+          text3</li>
+          <li class="fourth">
+            <span>안녕하세요.</span>
+            <p>
+              저는 홍길동입니다.
+              <span>저는 20살입니다.</span>
+            </p>
+            text4</li>
+          </ul> -->
+
+
+  <!-- 4) -->
+  <ul>
+    <li>
+      <a href="#">
+        <p><span>menu1</span></p>
+      </a>
+      <ul class="submenu">
+        <li>
+          <a href="#">
+            <p><span>submenu1</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><span>submenu2</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><span>submenu3</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><span>submenu4</span></p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">
+        <p><span>menu2</span></p>
+      </a>
+      <ul class="submenu">
+        <li>
+          <a href="#">
+            <p><span>submenu1</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><span>submenu2</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><span>submenu3</span></p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <p><span>submenu4</span></p>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">
+        <p><span>menu3</span></p>
+      </a>
+      <ul class="submenu">
+        <li><a href="#">
+            <p><span>submenu1</span></p>
+          </a></li>
+        <li><a href="#">
+            <p><span></span></p>
+          </a></li>
+        <li><a href="#">
+            <p><span>submenu3</span></p>
+          </a></li>
+        <li><a href="#">
+            <p><span>submenu4</span></p>
+          </a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">
+        <p><span>menu4</span></p>
+      </a>
+      <ul class="submenu">
+        <li><a href="#">
+            <p><span>submenu1</span></p>
+          </a></li>
+        <li><a href="#">
+            <p><span>submenu2</span></p>
+          </a></li>
+        <li><a href="#">
+            <p><span>submenu3</span></p>
+          </a></li>
+        <li><a href="#">
+            <p><span>submenu4</span></p>
+          </a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>

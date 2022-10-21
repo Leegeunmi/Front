@@ -1,0 +1,94 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  background: green;
+}
+
+.row {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row.justify-content-start {
+  justify-content: flex-start;
+}
+
+.row.justify-content-center {
+  justify-content: center;
+}
+
+.row.justify-content-end {
+  justify-content: end;
+}
+
+.row [class*=col] {
+  /*실습1)
+    float정렬 방식에서 flex정렬 방식으로
+    col요소를 노출하시오.
+    실습2)
+    justify-content-start, justify-content-center, justify-content-end
+    클래스를 추가하여 정렬하시오.
+    */
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid red;
+  background: pink;
+}
+
+.row .col-1 {
+  width: 6.5%;
+}
+
+.row .col-2 {
+  width: 15%;
+}
+
+.row .col-3 {
+  width: 23.5%;
+}
+
+.row .col-4 {
+  width: 32%;
+}
+
+.row .col-5 {
+  width: 40.5%;
+}
+
+.row .col-6 {
+  width: 49%;
+}
+
+.row .col-7 {
+  width: 57.5%;
+}
+
+.row .col-8 {
+  width: 66%;
+}
+
+.row .col-9 {
+  width: 74.5%;
+}
+
+.row .col-10 {
+  width: 83%;
+}
+
+.row .col-11 {
+  width: 91.5%;
+}
+
+.row .col-12 {
+  width: 100%;
+}

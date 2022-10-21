@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>드롭다운메뉴</title>
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/default.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="./assets/js/common.js"></script>
+</head>
+
+<body>
+  <!-- 전체레이아웃 -->
+  <div class="wrap">
+    <!-- 모바일 버튼 영역 -->
+    <input type="checkbox" id="gnbcheck" name="gnbcheck">
+    <label for="gnbcheck" id="gnbbtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <!--//--상단영역 -->
+    <div class="header">
+      <a href="index.html" class="logo">Logo</a>
+      <div class="gnb">
+        <label for="gnbcheck" id="mobile-close-btn"></label>
+        <!-- ul.mainmenu>li*4>a[href=#]{mainmenu$}+ul.submenu>li*4>a[href=#]{submenu$} -->
+        <ul class="mainmenu">
+          <li>
+            <a href="#">mainmenu1</a>
+            <ul class="submenu">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+              <li><a href="#">submenu4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">mainmenu2</a>
+            <ul class="submenu">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+              <li><a href="#">submenu4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">mainmenu3</a>
+            <ul class="submenu">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+              <li><a href="#">submenu4</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">mainmenu4</a>
+            <ul class="submenu">
+              <li><a href="#">submenu1</a></li>
+              <li><a href="#">submenu2</a></li>
+              <li><a href="#">submenu3</a></li>
+              <li><a href="#">submenu4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 상단영역--// -->
+    <!-- 메인영역 -->
+    <div class="main">
+      <div class="slide"></div>
+      <div class="board">
+        <div class="notice"></div>
+        <div class="gallery"></div>
+        <div class="banner"></div>
+      </div>
+    </div>
+    <!-- 하단영역 -->
+    <div class="footer">
+      <div class="f-left">Logo</div>
+      <div class="f-right">
+        <div class="f-menu"></div>
+        <div class="f-copy"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

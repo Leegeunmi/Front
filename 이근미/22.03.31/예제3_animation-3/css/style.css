@@ -1,0 +1,47 @@
+@charset "UTF-8";
+div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation-name: fillmodecheck;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+
+  /* backwards 두번째 상태부터 시작 후 처음으로 */
+  /* forwards  첫번째 상태 유지하고 시작 후 마지막 유지 */
+  /* bothwards 첫번째 상태 유지하고 시작 후 처음으로 */
+  /* both      두번쨰 상태부터 시작 후 마지막 유지 */
+}
+
+@keyframes fillmodecheck {
+  from {
+    top: 0; background: yellow;
+  }
+  to {
+    top: 300px; background: blue;
+  }
+}
+
+/* @keyframes bgcoloerchange {
+  0% {
+    left: 0;
+    background: red;
+  }
+  100% {
+    left: 100%;
+    background: orange;
+  }
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation-name: bgcoloerchange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */

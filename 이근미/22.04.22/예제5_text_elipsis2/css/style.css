@@ -1,0 +1,33 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body { background: lightyellow; color: Olive;}
+ul,ol { list-style: none; }
+a { color:#666666; }
+
+h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.flex-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  flex-basis: 300px;
+  flex-grow: 0;
+}
+
+.box .inner {
+  border: 1px solid DarkKhaki;
+  background: white;
+  padding: 20px;
+}
+
+.more-content a span {
+  border: 3px solid gold;
+  color: gold;
+}

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+* {box-sizing: border-box; margin: 0; padding: 0;}
+html,body {height: 100%;}
+body {background: gray; color: brown;}
+ul,ol {list-style: none;}
+a {color: white; text-decoration: none;}
+
+.wrap {
+  position: relative;
+  display: flex;
+  margin: 20px auto;
+  height: 100px;
+  width: 100%;
+  transition: .7s ease;  /*https://matthewlein.com/tools/ceaser*/
+}
+
+.items {
+  position: relative;
+  height: 100px;
+  width: 10%;
+  font-size: 21px;
+  font-weight: bold;
+  /* background: lightgreen; */
+  transition: .7s;
+  flex-shrink: 0; /*마우스올려서 늘어날때 나머지 박스가 작아지는게 아니라 크기 그대로 옆으로 밀려나게 한다.*/
+  /* flex-grow: 1; */
+
+}
+
+.items.on {
+  /* transform: scale(120%); */
+  width: calc(10% + 100px); /*items에 추가된 100px만큼 .wrap요소의 너비도 동일하게 늘어난다.*/
+   height: 150px;
+  margin-top: -25px;/*.items.on의 vertical align middle에 배치 위해서*/
+  z-index: 500;
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background: lightgreen;
+}

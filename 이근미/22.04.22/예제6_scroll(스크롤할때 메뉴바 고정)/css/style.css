@@ -1,0 +1,52 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body {
+  background: lightgray;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  min-width: 380px;
+}
+ul,ol { list-style: none; }
+a { color:#666666; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+/* nav area */
+nav {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background: white;
+}
+
+nav li {
+  display: inline-block;;
+  line-height: 70px;
+  padding: 0 10px;
+}
+
+/* section area */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#screen1 {
+  background: DarkSeaGreen;
+}
+
+#screen2 {
+  background: DarkOliveGreen;
+}
+
+#screen3 {
+  background: DarkSeaGreen;
+}

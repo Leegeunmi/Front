@@ -1,0 +1,7 @@
+@charset "UTF-8";
+body {background: LightCyan;}
+.progress + .progress {
+  margin-top: 20px;
+}
+
+.toggle-btn {margin-top: 50px;}

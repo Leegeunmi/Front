@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<channer><!-- 임의로 만드는 태그  태그명 자유-->
+  <title>web professional</title>
+  <link>http://naver.com</link>
+  <data>월요일 5월 2일</data>
+  <item>
+    <title>"우주에서 숨쉰다." 지구 밖 '산소분자' 최초 발견</title>
+    <date>월요일 5월 2일</date>
+    <link>http://daum.net</link><!--기사 주소 넣기-->
+    <description><![CDATA[]]<strong>지구</strong>를 떠나서 우주에서 숨을 쉬는 일이 (중략) 설명.</description>
+  </item>
+  <item>
+    <title>북한 해커 남한 온라인게임 털어 외화벌이</title>
+    <date>일요일 5월 1일</date>
+    <link>http://facebook.com</link>
+    <description>국산 온라인게임 프로그램을 해킹해 (중략) 단속할 필요가 있다고 말했다.</description>
+  </item>
+  <item>
+    <title>[종합] 코로나19 확진자 146명 증가, 서울 39명, 경기 42명</title>
+    <date>금요일 4월 29일</date>
+    <link>http://www.fnnews.com/news/202011110936093992</link>
+    <description>현재 코로나19 확진자가 146명 증가 했다고 한다. (중략) 설명.</description>
+  </item>
+</channer>

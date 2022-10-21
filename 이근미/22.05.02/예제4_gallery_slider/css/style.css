@@ -1,0 +1,63 @@
+@charset "UTF-8";
+* { box-sizing: border-box; margin: 0; padding: 0;}
+html,body { height: 100%; }
+body {background: black;}
+ul,ol { list-style: none; }
+a {color: #666666; text-decoration: none;}
+
+#container {
+  width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#navi {
+  width: 300px;
+  float: left;
+}
+
+#navi ul{
+  height: 460px;
+}
+
+#navi ul li {
+  width: 150px;
+  float: left;
+}
+
+#navi ul li img {
+  border: 3px solid white;
+}
+
+#navi {
+  overflow: hidden;
+}
+
+#navi .page-wrap {
+  width: 900px;
+}
+
+#navi .page-wrap .page {
+  width: 300px;
+  float: left;
+}
+
+#navi p {
+  width: 300px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+#navi p img {/* 마우스 오버 했을 때 손가락 모양되게  */
+  cursor: pointer;
+}
+
+#main {
+  width: 650px;
+  float: right;
+}
+
+#main img {
+  position: absolute;
+  border: 3px solid white;
+}

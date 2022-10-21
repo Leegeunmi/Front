@@ -1,0 +1,15 @@
+@charset "UTF-8";
+html,body { height: 100% }
+.box {
+  /* height: 100vh; */
+  /* height: 100px;
+  width: 50vw;/*상대단위 - 화면크기를 바꾸면 자동으로 크기 조정 된다.*/
+  background: green;
+}
+
+.item {
+  height: 100px;
+  width: 500px;/*절대단위 - 화면크기를 바꿔도 크기는 변화 없다.*/
+  background: red;
+  display: none;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>vue.js vue_component</title>
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+      <header-component></header-component>
+      <main-component></main-component>
+      <footer-component></footer-component>
+      <inner-component></inner-component>
+    </div>
+
+    <div id="app2">
+      {{message}}
+      <main-component></main-component>
+      <inner2-component></inner2-component>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      // 전역콤퍼넌트
+      // Vue.component(컴포넌트이름, 컴포넌트내용);
+      // Vue.component('header-component',{
+      //   template: '<header><h1><a href="#">Logo</a></h1></header>'
+      // });
+      Vue.component('main-component',{
+        tamplate: '<main><div class="container">container</div></main>'
+      });
+      // Vue.component('footer-component',{
+      //   tamplate: '<footer><h2><a href="#">footer-Logo</a></h2></footer>'
+      // });
+      //첫번째 인스턴스 -1
+      // let app = new Vue({
+      //   el: '#app',
+      //   data: {
+      //     message: 'this is component area!'
+      //   },
+      //   components: {
+      //     'inner-component': {
+      //       template: '<section>local-component</section>'
+      //     }
+      //   }
+      // });
+
+      //첫번째 인스턴스 -2
+      let cpt = {
+        template: '<section>local-component</section>'
+      }
+      let app = new Vue({
+        el: '#app',
+        data: {
+          message: 'this is component area!'
+        },
+        components: {
+          'inner-component': cpt
+        }
+      });
+
+      //두번째 인스턴스
+      let app2 = new Vue({
+        el: '#app2',
+        data: {
+          message: 'second app!'
+        },
+        components: {
+          'main-component': {
+            template: '<main>main-local-component</main>'
+          },
+          'inner2-component': cpt
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+@charset "UTF-8";
+$height: 50px;
+$boxSizes: 100,200,300;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #666666;
+}
+
+li,ul {
+  list-style: none;
+}
+
+#header {
+  height: $height;
+  //css 변수 적용방식
+  //height: var(--height);
+  background: gold;
+  overflow: hidden;
+  h1 {
+    line-height: 50px;
+    float: left;
+  }
+  #gnb {
+    float: right;
+    ul {
+      overflow: hidden;
+      li {
+        float: left;
+        a {
+        }
+      }
+    }
+  }
+}
+
+//box layout---
+// .box:nth-child(1){
+//   width: 100px;
+//   height: 100px;
+// }
+// .box:nth-child(2){
+//   width: 200px;
+//   height: 200px;
+// }
+// .box:nth-child(3){
+//   width: 300px;
+//   height: 300px;
+// }
+
+@mixin common-box {
+  position: absolute;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+
+@each $size in $boxSizes { //객수만큼 값을 던져주겠다.
+  .box-#{$size} {
+    @include common-box;
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+}

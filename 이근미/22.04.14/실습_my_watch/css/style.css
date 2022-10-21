@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Neonderthaw&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Pacifico&family=Permanent+Marker&family=Ultra&display=swap');
+
+* { margin: 0; padding: 0; }
+html,body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 95px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
+}
+
+#txt p {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.sticker {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}

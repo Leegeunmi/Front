@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
+}
+
+html {
+  font-size: 30px;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typing {
+  width: 20ch;/*px,%,em,rem,ch :(char.캐릭터.문자) -> 16px 0숫자 크기의 너비값 1ch*/
+  white-space: nowrap; /*감싸지않고 옆으로 쭉 펼치겠다.*/
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  animation: typing 3s 2s steps(20) both, blink .5s step-end infinite alternate;
+  /* 2초뒤에 3초동안 20번 나눠서 변화(위 키프레임 내용)하겠다.*/
+}

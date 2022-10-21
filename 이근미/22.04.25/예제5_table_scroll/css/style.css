@@ -1,0 +1,74 @@
+@charset "UTF-8";
+html,body { height: 100%;}
+a{ color: Chocolate; }
+body {
+  background: lightgreen;
+  background: linear-gradient(90deg, rgba(0, 168, 129, 1) 0%, rgb(16, 153, 0, 1) 100%);
+}
+
+section{
+  margin: 50px;
+}
+
+h1 {
+  font-size: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;/*테이블 내에서 상하정렬, default는 top이다.*/
+  font-weight: 300px;
+  font-size: 12px;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.tbl-header {
+  background: rgba(255,255,255,0.3);
+}
+
+.tbl-content {
+  height: 300px;
+  overflow: auto;
+  margin-top: 0;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* .tbl-content td {
+  width: 250px;
+  모바일 일때 가로스크롤 생기게 만들기
+} */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(15, 77, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(15, 77, 0, 0.5);
+}
+
+/* crom으로 열고 있는데 explorer로 열면 스타일들이 적용이 안된다.. */

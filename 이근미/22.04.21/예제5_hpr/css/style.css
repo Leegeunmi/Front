@@ -1,0 +1,26 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+a{ color:#666666; }
+body {
+  transition: 5s;
+  background: lightgray;
+}
+
+body.bg-red{background-color: red;}
+body.bg-green{background-color: green;}
+body.bg-blue{background-color: blue;}
+body.bg-yellow{background-color: yellow;}
+
+p {color: red;}
+
+#wrap-id {
+  position: absolute;
+  display: inline-block;
+  top: -500px;
+  transition: 5s;
+}
+
+body.bg-yellow #wrap-id{
+  top: 0;
+}

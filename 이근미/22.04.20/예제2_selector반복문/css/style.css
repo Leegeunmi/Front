@@ -1,0 +1,12 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+body { background: lightgray; }
+a{ color:#666666; }
+li{ position: relative; }
+
+.submenu > li > a > p > span {
+  display: block;
+  height: 20px;
+  line-height: 20px;
+}

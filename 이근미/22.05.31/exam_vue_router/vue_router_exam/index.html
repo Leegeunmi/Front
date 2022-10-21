@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>router 01</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1><router-link to="/">logo</router-link></h1>
+        <ul id="gnb">
+          <li v-for="list in gnbList">
+            <router-link v-bind:to="list.path">{{list.text}}</router-link>
+          </li>
+          <!-- <li><router-link to="/company">company</router-link></li>
+          <li><router-link to="/product">product</router-link></li>
+          <li><router-link to="/gallery">gallery</router-link></li>
+          <li><router-link to="/notice">notice</router-link></li> -->
+        </ul>
+      </header>
+      <router-view></router-view>
+      <footer-component></footer-component>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.5.4/vue-router.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

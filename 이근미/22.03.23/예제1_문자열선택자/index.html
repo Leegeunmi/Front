@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>문자열 선택자</title>
+  <link rel="stylesheet" href="./css/initial.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- 선택자  1.tag 2.id,class 3.구조선택자: first-cild...nth-child()  4.구조선택자: nth-of-type(1)-->
+  <div class="input-wrap">
+    <input type="text" name="search">
+    <input type="text" name="id">
+    <input type="password" name="password">
+  </div>
+  <div class="gnb topmenu yellow">
+    <ul>
+      <li><a href="#">menu1</a></li> <!-- ul>li*4>a[href#]{menu$} -->
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </div>
+  <div class="gnb topmenu black">
+    <ul>
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </div>
+  <div class="gnb leftmenu yellow">
+    <ul>
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </div>
+  <div class="gnb leftmenu black">
+    <ul>
+      <li><a href="#">menu1</a></li>
+      <li><a href="#">menu2</a></li>
+      <li><a href="#">menu3</a></li>
+      <li><a href="#">menu4</a></li>
+    </ul>
+  </div>
+  <div class="location">
+    <div class="en-lang">english</div> <!-- .en-lang{english} -->
+    <div class="ko-lang">korean</div>
+    <div class="jp-lang">japanese</div>
+  </div>
+  <div class="thumbnail">
+    <ul>
+      <li><a href="https://naver.com"><img src="./img/m_01.png" alt="이미지1"></a></li> <!-- ul>li*4>a[href=#]>img -->
+      <li><a href="https://daum.com"><img src="./img/m_02.png" alt="이미지2"></a></li>
+      <li><a href="https://google.com"><img src="./img/m_03.jpg" alt="이미지3"></a></li>
+      <li><a href="https://instargram.com"><img src="./img/m_04.gif" alt="이미지4"></a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- ko -> korea -->
+
+<head>
+  <meta charset="utf-8">
+  <title>input number</title>
+</head>
+
+<body>
+  <h1>select device</h1>
+  <!-- form태그를 통해서 데이터를 전달한다. -->
+  <!-- post와get방식 -->
+  <form method="get">
+    <!-- get은 개인정보일 때 사용하지 않는다 -->
+    <!-- class말고 id하는 것은 값을 명확하게 던져주기위해 -->
+    <!-- select 와 option이 짝 -->
+    <select id="kind" name="kind">
+      <option value="phone">phone</option>
+      <option value="tablet">tablet</option>
+    </select>
+    <select id="kindofdevice" name="kindofdevice">
+      <optgroup label="phone">
+        <option value="galaxy">galaxy</option>
+        <option value="iPhone">iPhone</option>
+        <option value="googlePhone">googlePhone</option>
+      </optgroup>
+      <optgroup label="tablet">
+        <option value="galaxy" selected>galaxy</option>
+        <option value="iPhone">iPhone</option>
+        <option value="googlePhone">googlePhone</option>
+      </optgroup>
+    </select>
+    <input id="quantity" type="number" name="quantity" min="1" max="10" step="2" value="1">
+    <button type="submit">구매하기</button>
+  </form>
+</body>
+
+</html>

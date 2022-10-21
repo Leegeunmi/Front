@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Heineken rotate page</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1><a href="#"><img src="./img/logo.svg" alt="Heineken"></a></h1>
+        <nav id="gnb">
+          <ul>
+            <li><a href="#">Find a Heineken</a></li>
+            <li><a href="#">Our stiry</a></li>
+            <li><a href="#">Sponsorships</a></li>
+            <li><a href="#">Our products</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <!-- 작은 썸네일이미지 -->
+          <nav id="pagenation">
+            <ul>
+              <li class="active"><img src="./img/img01.png" alt="img01" title="Original"></li>
+              <li><img src="./img/img02.png" alt="img02" title="Heineken® 0.0"></li>
+              <li><img src="./img/img03.png" alt="img03" title="Light"></li>
+              <li><img src="./img/img04.png" alt="img04" title="The Can"></li>
+            </ul>
+          </nav>
+          <!-- 큰이미지 노출영역 -->
+          <div class="items change-img">
+            <img src="./img/img01.png">
+          </div>
+          <!-- 이미지 설명 영역 -->
+          <div class="items text">
+            <h2>"The Original"</h2>
+            <p class="desc">Always refreshing to see something you recognise. Cold, fresh, high quality Heineken®. Enjoyed near and far since 1873.</p>
+            <a href="#" class="btn">discover more</a>
+          </div>
+          <!-- 회전하는 텍스트 -->
+          <div class="rotate-items">
+            <ul>
+              <li style="--i:1;"><span>The Can</span></li>
+              <li style="--i:2;"><span>Light</span></li>
+              <li style="--i:3;"><span>Heineken® 0.0</span></li>
+              <li style="--i:4;"><span>Original</span></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="text/javascript">
+    // 변수선언
+    const descArray = [];
+    descArray[0] = 'Always refreshing to see something you recognise. Cold, fresh, high quality Heineken®. Enjoyed near and far since 1873.';
+    descArray[1] = 'No alcohol, 100% Heineken®. We are proud of our Heineken® 0.0. Brewed with devotion and our heritage knowledge of beer.'
+    descArray[2] = 'Not just any light beer. An award-winning light beer.'
+    descArray[3] = 'On the beach, at a party or on the go? Feel and enjoy wherever you are a true touch of class with a cold can of Heineken®, the refreshing taste that is kept safe from light and air.'
+    const btn = document.querySelector('.btn');
+    let selectElem = document.querySelectorAll('#pagenation ul li');
+    let textElem = document.querySelector('.text h2');
+    let descElem = document.querySelector('.text .desc');
+    let imgElem = document.querySelector('.change-img img');
+    let rotateElem = document.querySelector('.rotate-items ul');
+    // console.log(selectElem);
+    // console.log(textElem);
+    // console.log(descElem);
+    // console.log(imgElem);
+    // console.log(rotateElem);
+    console.log(descArray);
+    selectElem.forEach((items, i) => {
+      // console.log(`${items},${i}`);
+      items.onclick = function(){
+        console.log(`click!${i}::::${items}`);
+        selectElem.forEach((check) => {
+          check.classList.remove('active');
+        });
+        this.classList.add('active');
+        // change-img(main img), text(main text) 변경
+        let src = items.firstChild.getAttribute('src');
+        let title = items.firstChild.getAttribute('title');
+        // let title = this.firstChild.title;
+        imgElem.setAttribute('src',`${src}`);
+        textElem.innerHTML = `"${title}"`;
+        descElem.innerHTML = `${descArray[i]}`;
+        rotateElem.style.transform = `rotate(${i*90}deg)`;
+      }
+      // pagenation ul li img를 클릭하면 items text의 h2와 desc값이 pagenation ul li내용 순서대로 들어간다.
+    });
+
+    </script>
+  </body>
+</html>

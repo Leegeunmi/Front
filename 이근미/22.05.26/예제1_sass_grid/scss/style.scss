@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+// 변수 선언
+$columnWidth: 6.5%;
+$gutterWidth: 2%;
+
+// mixin
+@mixin col($count) {
+  width: ( $columnWidth*$count ) + ( $gutterWidth*($count - 1) );
+}
+
+// layout
+* { margin: 0; padding: 0; }
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  background: green;
+}
+
+.row {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  &.justify-content-start {
+    justify-content: flex-start;
+  }
+  &.justify-content-center {
+    justify-content: center;
+  }
+  &.justify-content-end {
+    justify-content: end;
+  }
+  [class *= col] {
+    /*실습1)
+    float정렬 방식에서 flex정렬 방식으로
+    col요소를 노출하시오.
+    실습2)
+    justify-content-start, justify-content-center, justify-content-end
+    클래스를 추가하여 정렬하시오.
+    */
+    flex-direction: row;
+
+    // float: left;
+    // margin-left: $gutterWidth;
+    box-sizing: border-box;
+    border: 1px solid red;
+    background: pink;
+    // &:first-child {
+    //   margin-left: 0;
+    // }
+  }
+  // mixin 적용
+  // .col-1 { @include col(1); }
+  // .col-2 { @include col(2); }
+  // .col-3 { @include col(3); }
+  // .col-4 { @include col(4); }
+  // .col-5 { @include col(5); }
+  // .col-6 { @include col(6); }
+  // .col-7 { @include col(7); }
+  // .col-8 { @include col(8); }
+  // .col-9 { @include col(9); }
+  // .col-10 { @include col(10); }
+  // .col-11 { @include col(11); }
+  // .col-12 { @include col(12); }
+
+  //for구문 적용
+  @for $i from 1 through 12 {
+    .col-#{$i} {@include col($i);}
+  }
+}

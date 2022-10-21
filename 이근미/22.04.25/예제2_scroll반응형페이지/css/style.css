@@ -1,0 +1,95 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 1s ease; /* 배경색 바뀔 때 효과 */
+  /* background-color: SteelBlue; */
+}
+ul,ol { list-style: none; }
+a{
+  display: inline-block;
+  background: #ffffff;
+  color: Chocolate;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;;
+  line-height: 30px;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  /* top: 0; *//* top: 0하면 위로붙는다 */
+  /*top: auto;*/
+  bottom: 0;
+  background-color: #ffffff;
+  min-width: 180px; /* 반응형 때 줄어든는 것 염두 */
+}
+
+nav li {
+  display: inline-block;
+  line-height: 70px;
+  padding: 0 10px;
+}
+
+nav li a {
+  color: gray;
+  text-transform: uppercase;
+}
+
+.slide {
+  /* html에서 view port 내용추가하기 */
+  position: relative;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+}
+
+.slide:nth-child(1) {
+  background-color: pink;
+}
+.slide:nth-child(2){
+  background-color: tomato;
+}
+.slide:nth-child(3){
+  background-color: pink;
+}
+.slide:nth-child(4){
+  background-color: tomato;
+}
+.slide:nth-child(5){
+  background-color: pink;
+}
+.slide:nth-child(6){
+  background-color: tomato;
+}
+
+
+.slide .inside {
+  transition: .8s ease;
+  opacity: 0;
+  margin-left: -100px;
+}
+
+.slide.on .inside{
+  opacity: 1;
+  margin-left: 0px;
+}
+
+.slide .inside .items h2 {
+  font-size: 24px;
+}

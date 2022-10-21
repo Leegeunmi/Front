@@ -1,0 +1,30 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+
+div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  font-size: 2rem;
+  color: black;
+  background-color: rgba(142, 212, 95, 1);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+  transition-property: width, background-color, opacity, top, left; /*적용될방향/속성*/
+  transition-duration: .5s; /*총시간*/
+  transition-timing-function: ease-in; /*진행속도*/
+  /* transition-delay: .5s; 시작시간 연기*/
+}
+
+div:hover {
+  width: 500px;
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+  background-color: green;
+  background-color: rgba(142, 212, 95, 0);
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 1);
+}

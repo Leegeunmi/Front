@@ -1,0 +1,11 @@
+@charset "UTF-8";
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+a{ color:#666666; text-decoration: none; }
+
+input[type=submit] {
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+}

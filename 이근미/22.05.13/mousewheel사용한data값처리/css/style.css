@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+
+/*우측의 스크롤바 안보이게 하기*/
+html {overflow: hidden;}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:nth-child(odd){
+  background: PaleTurquoise;
+}

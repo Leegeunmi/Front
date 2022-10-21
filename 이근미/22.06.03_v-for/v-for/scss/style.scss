@@ -1,0 +1,72 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+// 변수정의 영억
+$width: 1200px;
+
+// main menu area
+#menu {
+  width: $width;
+  margin: 0 auto;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-right: 0;
+    &:last-child {
+      border-right: 1px solid lightgray;
+    }
+    a {
+      line-height: 30px;
+      padding: 0 5px;
+      display: inline-block;
+      width: 100%; //width. height 100%는 호버영역을 넓히는 것
+      height: 100%;
+    }
+  }
+}
+
+// main banner area
+main {
+  background: #fcfcfc;
+  box-sizing: border-box;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-color: lightgray;
+  border-style: solid;
+  .container {
+    width: $width;
+    min-height: 350px;
+    margin: 0 auto;
+    background: silver;
+  }
+}
+
+// footer area
+#footer {
+  background: #dddddd;
+  .inner {
+    width: $width;
+    margin: 0 auto;
+    display: flex;
+    background: #666666;
+    box-sizing: border-box;
+    padding: 20px;
+    a {
+      color: white;
+    }
+    h3 {
+      flex: 100px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body { background-color: orange; }
+
+#wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#wrap::before {
+  content: 'orange';
+  font-size: 5em; /*부모요소(body)의 font-size: 16px의 2배 32px이 된다.*/
+  color: white;
+}
+
+
+/* media query area */
+
+@media screen and ( max-width:992px ) {
+  body { background: green; font-size: 15px;}
+  #wrap::before {
+    content: 'green';
+  }
+}
+
+
+@media screen and ( max-width:700px ) { /*코드 아래로 갈수록 적용힐 숫자는 작아야 한다*/
+  body { background: blue; font-size: 10px; }
+  #wrap::before {
+    content: 'blue';
+  }
+}
+
+@media screen and ( max-width:500px ) {
+  body { background: skyblue; font-size: 7px;}
+  #wrap::before {
+    content: 'sky';
+  }
+}
+
+@media screen and ( min-width: 300px ) and (max-width: 350px) {
+  body { background: pink; font-size: 7px; }
+  #wrap::before {
+    content: 'pink';
+  }
+}
+
+
+@media screen and ( min-width: 1200px ) {
+  body { background: navy; font-size: 20px; }
+  #wrap::before {
+    content: 'navy';
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  body { background: gray; font-size: 25px; }
+  #wrap::before {
+    content: 'gray';
+  }
+}
+
+@media screen and ( orientation: landscape ) { /*비율상 가로가 더 길면 가로모드로 인식하여 배경을 검정색으로 바꾼다.*/
+  body { background: black; }
+}
+
+@media screen and ( orientation: portrait ) { /*비율상 세로가 더 길면 세로모드로 인식하여 배경을 베이지색으로 바꾼다.*/
+  body { background: beige; }
+}

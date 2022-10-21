@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Laila:wght@400;500&display=swap');
+
+* { margin: 0; padding: 0; }
+html,body { height: 100%; }
+ul,li { list-style: none; }
+button { border: 0; background: none; }
+button,input { outline: none; }
+
+#header {
+  text-align: center;
+}
+
+#header h1 {
+  height: 100px;
+  line-height: 100px;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 50px;
+  color: #CD5C5C;
+}
+
+.chatting-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chatting {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid #cf6b67;
+}
+
+.chatting .title {
+  position: absolute;
+  height: 50px;
+  line-height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #cf6b67;
+  padding: 0 5px;
+  font-family: 'Laila', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.chatting .chat-box {
+  height: 500px;
+  box-sizing: border-box;
+  padding: 60px 10px 0;
+  margin-right: -16px;
+  overflow-y: scroll;
+  font-family: 'Laila', sans-serif;
+  font-weight: 500;
+}
+
+/* chat line ---*/
+.chatting .chat-box .line {
+  position: relative;
+  padding-left: 30px;
+  line-height: 25px;
+  max-width: calc(100% - 30px);
+}
+
+.chatting .chat-box .line + .line {
+  margin-top: 20px;
+}
+
+/* 프사 */
+.chatting .chat-box .line::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  background-size: cover;
+}
+
+.chatting .chat-box .line.char-a::before {
+  background-image: url('../img/img_01.jpg');
+}
+
+.chatting .chat-box .line.char-b::before {
+  background-image: url('../img/img_02.jpg');
+}
+
+.chatting .chat-box .line.char-c::before {
+  background-image: url('../img/img_03.jpg');
+}
+
+/* 채팅 type2 오른쪽 배치 */
+.chatting .chat-box .line.right {
+  padding: 0 30px 0 0;
+  text-align: right;
+}
+
+.chatting .chat-box .line.right::before {
+  left: auto;
+  right: 0;
+}
+
+/* 채팅 텍스트 */
+.chatting .chat-box .line .txt {
+  background: #f1f1f1;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 0 5px;
+  display: inline-block;
+  font-size: 14px;
+  color: #734746;
+  text-align: left;
+}
+
+.chatting .chat-box .line.right .txt {
+  background: #F08080;
+  color: white;
+}
+
+/* 입력창 영역 ---*/
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #cf6b67;
+}
+
+.input-box input, .input-box button {
+  height: 30px;
+  line-height: 30px;
+}
+
+.input-box input {
+  flex-grow: 1;
+  border: none;
+  padding: 0 5px;
+}
+
+.input-box button {
+  padding: 0 10px;
+  background: #cf6b67;
+  color: white;
+  font-weight: bold;
+}

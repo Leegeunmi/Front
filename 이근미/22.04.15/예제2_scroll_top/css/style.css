@@ -1,0 +1,37 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; }
+html,body { height: 100%; }
+ul,li { list-style: none; }
+button { border: 0; background: none; }
+button,input { outline: none; }
+
+#mydiv {
+  width: 250px;
+  height: 250px;
+  overflow: auto;
+}
+
+#content {
+  width: 2000px;
+  /* height: 800px; */
+  background: palevioletred;
+  color: white;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+button {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background: lightgray;
+}
+
+button.x-axis {
+  background: skyblue;
+}

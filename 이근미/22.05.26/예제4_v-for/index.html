@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>vue.js v-bind</title>
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">
+        <ul id="menu">
+          <!-- <li><a href="http://naver.com">company</a></li>
+          <li><a href="http://naver.com">product</a></li>
+          <li><a href="http://naver.com">gallery</a></li>
+          <li><a href="http://naver.com">location</a></li> -->
+          <!--
+          실습
+          v-for를 사용하여 아래 메뉴를 구현하시오.
+          (href와 menu text데이터는 menuList변수에서 가져오시오)-->
+          <li v-for="list in menuList">
+            <a v-bind:href="list.ahref">{{list.menu}}</a>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container">
+          {{menuList[0].menu}}{{menuList[0].ahref}}
+          {{menuList[1].menu}}{{menuList[1].ahref}}
+          {{menuList[2].menu}}{{menuList[2].ahref}}
+          {{menuList[3].menu}}{{menuList[3].ahref}}
+        </div>
+      </main>
+      <footer id="footer">
+        <div class="inner">
+          <h3><a href="#">logo</a></h3>
+          <ul id="f-menu">
+            <!--
+            실습
+            v-for를 사용하여 아래 메뉴를 구현하시오.
+            (href와 menu text데이터는 fMenuList변수에서 가져오시오)-->
+            <li v-for="list in fMenuList">
+              <a v-bind:href="list.ahref">{{list.menu}}</a>
+            </li>
+            <!-- <li><a href="http://naver.com">company</a></li> -->
+            <!-- <li><a v-bind:href="menuList[0].ahref">{{menuList[1].menu}}</a></li>
+            <li><a href="http://naver.com">product</a></li>
+            <li><a href="http://naver.com">gallery</a></li>
+            <li><a href="http://naver.com">location</a></li>
+            <li><a href="./community/notice.html">notice</a></li>
+            <li><a href="./community/faq.html">faq</a></li> -->
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: '#app',
+        data: {
+          menuList: [
+            {menu: 'company', ahref: 'http://naver.com'},
+            {menu: 'product', ahref: 'http://naver.com'},
+            {menu: 'gallery', ahref: 'http://naver.com'},
+            {menu: 'location', ahref: 'http://naver.com'}
+          ],
+          fMenuList: [
+            {menu: 'company', ahref: 'http://naver.com'},
+            {menu: 'product', ahref: 'http://naver.com'},
+            {menu: 'gallery', ahref: 'http://naver.com'},
+            {menu: 'notice', ahref: './community/notice.html'},
+            {menu: 'faq', ahref: './community/faq.html'}
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>

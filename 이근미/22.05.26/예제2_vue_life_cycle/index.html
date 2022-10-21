@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>vue life cycle</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{message}}</h1>
+      <p>{{nowDate}}</p>
+      <p>{{changeText}}</p>
+      <p>{{numData}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      let app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue.js!',
+          nowDate: '2022-05-26',
+          changeText: 'Hi vue!',
+          numData: 12345
+        },
+        // 생성하기전
+        beforeCreate: function(){
+          console.log('beforeCreate!');
+          console.log(this.message);
+        },
+        // 생성하고나서
+        created: function(){
+          console.log('created!');
+          console.log(this.message);
+          console.log(this.numData);
+        },
+        mounted: function(){
+          console.log('mounted!');
+          console.log(this.message);
+          this.changeText = 'I am Vue!';
+          // this.changeText = this.message;
+          console.log(this.numData);
+        },
+        // 변경되었을 때 감지해라
+        updated: function(){
+          console.log('updated!');
+          console.log(this.message);
+          this.changeText = 'Hola Vue!';
+        }
+      });
+    </script>
+  </body>
+</html>

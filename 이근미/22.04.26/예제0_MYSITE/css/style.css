@@ -1,0 +1,22 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+body {
+  background: #fff6e6;
+  color: red;
+}
+ul,ol { list-style: none; }
+a {
+  display: inline-block;
+  color: red;
+  font-weight: normal;
+}
+
+#wrap {
+  margin: 0 auto;
+  background: yellow;
+}
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}

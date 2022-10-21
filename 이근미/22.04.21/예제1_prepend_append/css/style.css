@@ -1,0 +1,29 @@
+@charset "UTF-8";
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+body { background: lightgray; }
+/* a{ color:#666666; }
+li{ position: relative; } */
+
+/* li {
+min-height: 20px;
+line-height: 20px;
+border: 1px solid black;
+} */
+
+ul li a > * {
+  float: left;
+}
+ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  height: 32px;
+  text-transform: uppercase;
+  color: black;
+}
+
+ul li a img {
+  height: 20px;
+  margin-right: 5px;
+}

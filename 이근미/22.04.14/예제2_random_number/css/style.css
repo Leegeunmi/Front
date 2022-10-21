@@ -1,0 +1,19 @@
+@charset "UTF-8";
+div {
+  position: relative;
+  background: #fc563d;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.selected {
+  background: green;
+  left: 100px;
+  transition: 1s;
+}

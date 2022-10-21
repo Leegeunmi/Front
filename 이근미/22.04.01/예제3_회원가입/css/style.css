@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* //--general ui */
+/* input default style */
+input {
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid #cccccc;
+}
+/* input size type */
+input.big {
+  width: 478px;
+}
+
+input.middle {
+  width: 250px;
+}
+
+input.small {
+  width: 150px;
+}
+
+input.tiny {
+  width: 100px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #9d9d9d;
+}
+
+/* check box label style */
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #999999;
+  margin: 5px 0 0 12px;
+}
+
+input[type=checkbox]:checked + label:after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 6px;
+  height: 7.5px;
+  top: 0;
+  left: 0;
+  /* padding: 3px; */
+  border-style: solid;
+  border-color: #333333;
+  border-width: 0 3px 3px 0;
+  left: 50%;
+  top: calc(50% - 2.5px);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  /* transform: translate(10px) rotate(45deg); /*로테이트를 먼저하고 트랜스레이트 하는것과 트랜스레이트먼저하고 로테이트 하는 것이 결과 값 다르다*/ */
+}
+
+/* buttn style */
+button {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  box-sizing: border-box; /*여기까지 해두고 디자인 시작*/
+}
+
+button:focus {
+  outline: none;
+}
+
+.gbtn {
+  padding: 10px 15px;
+}
+
+.gbtn.normal {
+  padding: 10px 15px;
+  color: #ffffff;
+  font-size: 15px;
+  min-width: 110px;
+  background-color: #333333;
+}
+
+.gbtn.gray {
+  background-color: #818286;
+}
+
+.gbtn.transparent {
+  color: #000000;
+  border: 1px solid #999999;
+  background-color: transparent;
+}
+
+.gbtn.transparent:focus {
+  border: 1px solid #333333;
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+.table_a {
+  table-layout: fixed; /*늘어나지 않고 설정값대로 고정하겠다. */
+  border-collapse: collapse; /*테이블 안 박스들 사이에 있는 기본간격을 없애고 하나의 표 처럼 만든다. */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table_a tr td {
+  position: relative;
+  border: 1px solid #dddddd;
+  border-left: 0;
+  border-right: 0;
+  padding: 14px 8px 14px;
+  font-size: 14px;
+}
+
+.table_a td > * { float: left; } /* *은 모든 요소를 가르킨다. */
+
+.table_a tr td:nth-child(1) {
+  width: 120px;
+  padding-left: 20px;
+  color: #333333;
+}
+
+.table_a td > i {
+  margin: 5px 5px 0;
+}
+
+.table_a tr td em {
+  position: absolute;
+  display: inline-block;
+  font-size: 15px;
+  color: #666666;
+  left: 0;
+}
+
+.txt {
+  display: inline-block;
+  font-size: 15px;
+  color: #999999;
+  margin: 5px 0 0 5px
+}
+
+input + .gbtn {
+  margin-left: 5px;
+}
+
+input + .txt {
+  margin-left: 21px;
+}
+
+/* general ui--// */
+
+#wrap {
+  max-width: 98px;
+  min-width: 768px;
+  margin: 0 auto;
+}
+
+#wrap .title {
+  position: relative;
+  padding: 10px 0 0;
+  border-bottom: 2px solid #333333;
+}
+
+#wrap .title h1 {
+  display: inline-block;
+  font-size: 25px;
+  line-height: 1;
+  color: #333333;
+}
+
+#wrap  .title .prec {
+  float: right;
+  height: 25px;
+  line-height: 25px;
+  padding: 0;
+  color: #666666;
+}
+
+#wrap .title .prec em {
+  font-size: 8px;
+  color: #f85858;
+  margin-right: 5px;
+}

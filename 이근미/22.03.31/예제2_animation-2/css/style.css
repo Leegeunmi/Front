@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@keyframes bgcoloerchange {
+  0% {
+    left: 0;
+    background: red;
+  }
+  100% {
+    left: 100%;
+    background: orange;
+  }
+}
+
+.box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation-name: bgcoloerchange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

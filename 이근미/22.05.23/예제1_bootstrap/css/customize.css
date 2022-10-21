@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.container .col, .container-fluid .col {
+  /* background-color: lightgreen; */
+  color: navy;
+  text-align: center;
+}
+
+.container-fluid .row + .row {
+  margin-top: 10px;
+}
+
+/* table 뒤에 오는 btn --> table + .btn */
+.col .table + .btn {
+  float: right;
+}
+
+.col:nth-child(odd) {
+  /* background-color: gold; */
+}
+
+.col.text {
+  padding: 30px;
+}
+
+.col.text + .col-auto.imgbox {
+  /* padding-top: 20px; */
+}
+
+.col.imgbox {
+  /* background-image: url("../img/hay-colour-crate_910x1100_brandmodel.jpg"); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.container-fluid .col.imgbox {
+  background-color: transparent;
+}
+
+.img-thumbnail {
+  padding: 1.25rem;
+}
+
+.container-fluid .col.imgbox img {
+  width: 100%;
+}

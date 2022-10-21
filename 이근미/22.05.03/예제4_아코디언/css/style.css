@@ -1,0 +1,30 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0;}
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+a {color: #666666; text-decoration: none;}
+body { background: #696969; }
+
+dl {
+  width: 800px;
+  margin: 50px auto;
+}
+
+dt {
+  font-size: 18px;
+  text-indent: 3em;
+  color: white;
+  line-height: 35px;
+  height: 35px;
+  background: black;
+}
+
+dd {
+  height: 300px;
+  background: #d4d0c8;
+}
+
+dd p {
+  text-indent: 1em;
+  padding: 20px;
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; }
+html,body { height: 100%; }
+ul,li { list-style: none; }
+button { border: 0; background: none; }
+button,input { outline: none; }
+
+#text {
+  transition: 1s;
+}
+
+.change-width {
+  width: 300px;
+}
+
+.change-bg {
+  background: navy;
+}
+
+.change-font-style {
+  font-size: 25px;
+  color: gray;
+}

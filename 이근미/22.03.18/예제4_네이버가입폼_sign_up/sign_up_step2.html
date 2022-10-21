@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>회원가입 step2</title>
+</head>
+
+<body>
+  <h1>naver</h1>
+  <form>
+    <table>
+      <tr>
+        <td>
+          <h3>
+            <label for="id">아이디</label>
+          </h3>
+          <input type="text" id="id" name="id" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="pw">비밀번호</label>
+          </h3>
+          <input type="password" id="pw" name="pw" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="repw">비밀번호 재확인</label>
+          </h3>
+          <input type="password" id="repw" name="repw" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="user_name">이름</label>
+          </h3>
+          <input type="text" id="user_name" name="user_name" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="year">생년월일</label>
+          </h3>
+          <div class="input-group"></div>
+          <input type="text" id="year" name="year" maxlength="4" size="4" placeholder="년(4자)">
+          <select id="month" name="month">
+            <option value="월">월</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <input type="text" id="date" name="date" maxlength="2" size="2">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="user_gender">성별</label>
+          </h3>
+          <select id="user_gender" name="user_gender">
+            <option value="성별">성별</option>
+            <option value="남자">남자</option>
+            <option value="여자">여자</option>
+            <option value="선택 안함">선택 안함</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="user_email">본인 확인 이메일<span class="select-opt-text">(선택)</span></label>
+          </h3>
+          <input type="text" id="user_email" name="user_email" size="30" placeholder="선택입력">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>
+            <label for="user_cellphone">휴대전화</label>
+          </h3>
+          <ul>
+            <li>
+              <select id="local-number" name="local-number">
+                <option value="일본 +81">일본 +81</option>
+                <option value="대한민국 +82" selected>대한민국 +82</option>
+                <option value="루마니아 +40">루마니아 +40</option>
+                <option value="몽골 +976">몽골 +976</option>
+              </select>
+            </li>
+            <li>
+              <input type="tel" id="user_number" name="user_number" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="전화번호 입력">
+              <button type="submit">인증번호받기</button>
+            </li>
+            <li>
+              <input type="text" id="auth_num" name="auth_num" maxlength="4" placeholder="인증번호 입력하세요">
+            </li>
+          </ul>
+          <button type="submit">가입하기</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <footer>
+    <p>회사, 동아리 등 단체에서 사용할 ID가 필요하세요?<br><a href="#">단체 회원가입</a></p>
+    <table>
+      <tr>
+        <td><a href="#">이용약관</a>&nbsp;</td>
+        <td><a href="#">개인정보처리방침</a>&nbsp;</td>
+        <td><a href="#">책임의 한계와 법적고지</a>&nbsp;</td>
+        <td><a href="#">회원정보 고객센터</a></td>
+      </tr>
+    </table>
+    &copy;NAVER Corp
+  </footer>
+</body>
+
+</html>

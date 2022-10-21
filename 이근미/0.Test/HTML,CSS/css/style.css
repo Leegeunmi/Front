@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+body {
+  text-align: center;
+}
+
+div.main_menu {
+  display: inline-block;
+  position: relative;
+}
+
+div.main_menu > ul {
+  text-align: center;
+  padding: 5px;
+  background-color: orange;
+}
+
+div.main_menu > ul > li {
+  display: inline-block;
+  background-color: skyblue;
+  position: relative;
+}
+
+div.main_menu ul ul {
+  position: absolute;
+  background-color: pink;
+  /* display: none; */
+}
+
+div.main_menu > ul > li a:hover ul ul {
+  display: block;
+}

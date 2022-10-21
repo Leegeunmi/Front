@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<channer>
+  <!-- 임의로 만드는 태그 태그명 자유-->
+  <title>web professional</title>
+  <link>http://naver.com</link>
+  <data>월요일 5월 2일</data>
+  <item>
+    <title>[영상] 토네이도 쫓다가 교통사고로 사망한 美 대학생들</title>
+    <date>2022.05.02.오전 11:38</date>
+    <editor>디지털 뉴스부</editor>
+    <link>https://n.news.naver.com/mnews/article/057/0001660308?sid=104</link>
+    <description>집으로 돌아가는 길에 변 당해…학생들 신고로 시신 발견 토네이도 (중략) 비상상태 선포</description>
+  </item>
+  <item>
+    <img src="./img/2th-img.jpg" alt=""/>
+    <title>"트위터 인수" 머스크에 바람잡은 이 사람</title>
+    <date>2022.05.01.오후 4:09</date>
+    <editor>김유진 기자 ></editor>
+    <link>https://n.news.naver.com/mnews/article/032/0003144056?sid=104</link>
+    <description>세계 최고 갑부인 일론 머스크 테슬라 최고경영자(CEO)가 트위터 인수를 결정하는 과정에서 (중략) 보도했다.</description>
+  </item>
+  <item>
+    <title>제3회 공공디자인 국민 아이디어 공모전 개최</title>
+    <date>22.05.02.오전 11:07</date>
+    <editor>김석 기자 ></editor>
+    <link>https://n.news.naver.com/mnews/article/056/0011258787?sid=103</link>
+    <description>국민 아이디어로 일상의 문제를 해결하고 공공디자인의 가치를 실현하고자 (중략) 개최합니다.</description>
+  </item>
+</channer>

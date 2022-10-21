@@ -1,0 +1,43 @@
+@charset "UTF-8";
+* { box-sizing: border-box; margin: 0; padding: 0;}
+html,body { height: 100%; }
+ul,ol { list-style: none; }
+
+table {
+  width: 500px;
+  margin: 100px auto;
+}
+
+table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* th는 항목명이므로 기본으로 text-aline이 center이다 */
+
+
+/* th를 제외한 나머지에 hover적용 */
+table tr:not(:first-child):hover {
+  background: #bed8ff;
+}
+
+th {
+  background: #222222;
+  color: white;
+  height: 32px;
+  vertical-align: middle;
+}
+
+/* th간의 색상구분하기 */
+th:nth-child(odd){
+  background: #444444;
+}
+
+th,td {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* script code에 사용될 class */
+.hover {
+  background: #bed8ff;
+}
