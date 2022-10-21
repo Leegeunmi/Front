@@ -1,0 +1,61 @@
+//community table
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  // border-collapse: collapse;:
+  // border: 0;
+  & + .gbtn {
+    margin-top: 20px;
+
+    &.right {
+      float: right;
+    }
+  }
+
+  th {
+    padding: 15px 25px;
+    text-align: center;
+    font-weight: 500;
+    font-size: $fontSizeNormal;
+    color: white;
+    text-transform: uppercase;
+    &:nth-child(1) {
+      width: 50px;
+      padding-right: 0;
+    }
+    &:nth-child(2) {
+      width: 500px;
+    }
+  }
+
+  td {
+    padding: 15px 25px;
+    text-align: center;
+    vertical-align: middle;
+    /*테이블 내에서 상하정렬, default는 top이다.*/
+    font-weight: 300px;
+    font-size: $fontSizeNormal;
+    color: $fontColorBasic;
+    border-bottom: 1px solid $boderColorPrimary;
+    &:nth-child(1) {
+      width: 50px;
+      padding-right: 0;
+    }
+    &:nth-child(2) {
+      width: 500px;
+    }
+  }
+}
+
+.tbl-header {
+  background: $tableBarBgHover;
+}
+
+.tbl-content {
+  margin-top: 0;
+  background: $tableBg;
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+//scss파일분화
+@import "var.scss"; //공통 변수
+@import "initial.scss"; //css초기화
+@import "common.scss"; //공통 요소
+@import "component.scss"; //공통 컴포넌트
+@import "layout.scss"; //공통 레이아웃
+
+@import "notice.scss"; //community - notice
+@import "faq.scss"; //community - faq
+
+@import "products.scss"; //products - furniture,accessories,lighting
+
+@import "mainswiper.scss";//main - swiper ( mainbanner )
+
+//페이지 분화
+@import "main.scss"; //메인페이지
+@import "subpage.scss"; //서브페이지
+// @import "company.scss"; //각페이지별로 구성할 수 있다.
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Baskerville&family=Lora&display=swap');

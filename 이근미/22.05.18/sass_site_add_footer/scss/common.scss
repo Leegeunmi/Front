@@ -1,0 +1,17 @@
+// common ui (공통)
+//general button
+.gbtn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin-top: 25px;
+  line-height: 35px;
+  text-align: center;
+  background: $gbtnColor;
+  color: $boderColorPrimary;
+  border: 1px solid $boderColorPrimary;
+  &:hover {
+    color: $gbtnColor;
+    background: $boderColorPrimary;
+  }
+}

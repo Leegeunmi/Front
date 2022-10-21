@@ -1,0 +1,31 @@
+//accodion
+
+.accodion {
+  dl {
+    margin: 50px auto;
+
+    dt {
+      font-size: 18px;
+      text-indent: 3em;
+      color: white;
+      line-height: 53px;
+      height: 53px;
+      background: $tableBarBg;
+      cursor: pointer;
+
+      &:hover,&.active {
+        background: $tableBarBgHover;
+      }
+    }
+
+    dd {
+      height: 300px;
+      background: $tableBg;
+    }
+
+    dd p {
+      text-indent: 1em;
+      padding: 30px 70px;
+    }
+  }
+}

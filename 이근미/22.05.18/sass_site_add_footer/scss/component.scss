@@ -1,0 +1,106 @@
+// component
+
+.box {
+  display: flex;
+
+  .items {
+    box-sizing: border-box;
+    padding: 50px;
+    flex: 100%;
+    flex-shrink: 0;
+    font-size: $fontSizeMid;
+
+    .title {
+      font-size: $titleFontSizeBig;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.items_2 {
+    .items {
+      flex: 50%;
+    }
+  }
+}
+//community table
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  // border-collapse: collapse;:
+  // border: 0;
+  & + .gbtn {
+    margin-top: 20px;
+
+    &.right {
+      float: right;
+    }
+  }
+
+  th {
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: $fontSizeNormal;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  td {
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+    /*테이블 내에서 상하정렬, default는 top이다.*/
+    font-weight: 300px;
+    font-size: $fontSizeNormal;
+    color: $fontColorBasic;
+    border-bottom: 1px solid $boderColorPrimary;
+  }
+}
+
+.tbl-header {
+  background: $tableBg;
+}
+
+.tbl-content {
+  margin-top: 0;
+}
+//accodion
+
+.accodion {
+  dl {
+    margin: 50px auto;
+    dt {
+      font-size: 19px;
+      text-indent: 3em;
+      color: white;
+      line-height: 40px;
+      height: 40px;
+      background: $tableBg;
+      cursor: pointer;
+      &:hover {
+        background: $tableBgHover;
+      }
+    }
+    dd {
+      height: 300px;
+      background: rgba(255,255,255, .7);
+    }
+    dd p {
+      text-indent: 1em;
+      padding: 20px;
+    }
+  }
+}
+
+//kakao map
+.map-info-window {
+  width: 150px;
+  text-align: center;
+  padding: 6px 0;
+}

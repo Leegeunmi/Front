@@ -1,0 +1,50 @@
+body.subpage.products {
+    main {
+      .content-wrap {
+        text-align: center;
+        margin-bottom: 50px;
+
+        // width - 990px
+        .innerbox {
+          display: inline-block;
+          position: relative;
+          margin-bottom: 50px;
+          width: 440px;
+          height: 100%;
+          padding: 0 50px;
+          .imgbox {
+            position: relative;
+            z-index: 500;
+            width: 440px;
+            height: 600px;
+            opacity: 1;
+            img {
+              object-fit: cover;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 1;
+            }
+            &:hover {
+              opacity: 0;
+              transition: .7s;
+            }
+          }
+          .colorbox {
+            position: absolute;
+            text-align: center;
+            justify-content: center;
+            line-height: 600px;
+            top: 0;
+            left: 50px;
+            width: 440px;
+            height: 600px;
+            opacity: 1;
+            color: white;
+            background: $imgHoverBg;
+          }
+        }
+      }
+    }
+}
